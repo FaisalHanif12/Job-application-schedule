@@ -44,7 +44,8 @@ whole-file-replace document store, you can APPEND and make TARGETED EDITS. Do th
 rewrite a whole state file to add rows — that is how rows get lost.
 
 === THE SIX RULES THAT MATTER MORE THAN OUTPUT ===
-1. NEVER apply to or prepare the same job or company twice.
+1. NEVER apply to or prepare THE SAME JOB twice. The same COMPANY is fine and often desirable —
+   exclusion is per posting, never per employer. See STEP 2.
 2. NEVER INVENT A JOB. Every posting must have a URL you actually OPENED and read. If it
    404s, or is an aggregator reposting a dead listing, DROP IT. Do not reconstruct a job
    from a search snippet. Eleven real jobs beat twenty where nine are dead links.
@@ -240,8 +241,27 @@ a row marked interview or rejected must block too, or you will re-apply to a com
 currently interviewing with. Vocabulary: prepared, submitted, rejected, interview, expired.
 ALL OF THEM BLOCK.
 
-EXCLUDE A CANDIDATE IF EITHER ITS JOB URL OR ITS COMPANY DOMAIN IS IN THE SET. This is an OR,
-not an AND. An AND reading lets a second role at an already-applied company through.
+*** EXCLUDE BY JOB URL ONLY. A COMPANY IS NEVER BLOCKED BY A PREVIOUS APPLICATION. ***
+The unit of exclusion is THE SPECIFIC POSTING, whether or not it was ever submitted. A second,
+different role at the same company is a perfectly good application and must be allowed through.
+
+This rule was the opposite until 15 August, and it was expensive. Blocking by company meant one
+prepared-and-never-submitted role sealed off the entire employer forever: a single 7 August row
+put ALL 200 of Twilio's postings out of reach, 87 of them engineering and every one of them
+remote. Twenty-seven rows had closed twenty-seven companies, several of them among the best
+sources available. NEVER REINSTATE COMPANY-LEVEL BLOCKING FROM THIS TABLE.
+
+Company-level blocking comes from exactly two places and nowhere else:
+  - the "## Permanent exclusions, never apply" table — current employer, previous employer,
+    staffing and body-shop firms. Permanent and correct.
+  - state/standing-rejected.md — companies assessed and found unsuitable, with a reason.
+A row in "## The list" is NOT a company block. It blocks its own job_url and nothing more.
+
+ONE LIMIT REMAINS, and it is about the shape of a day's packet rather than about exclusion: AT
+MOST THREE ROLES FROM ANY ONE COMPANY IN A SINGLE RUN. Ten roles at one employer is not a day's
+work, it reads as spray-and-pray to whoever opens the applications, and it stakes the whole
+morning on one hiring team. Beyond three, take the highest-scoring three and leave the rest for
+another day. They are not excluded and they remain available tomorrow.
 
 Normalise URLs before comparing: strip the scheme, strip "www.", strip TRACKING parameters
 (utm_*, ref, source, gh_src).
@@ -249,10 +269,14 @@ Normalise URLs before comparing: strip the scheme, strip "www.", strip TRACKING 
 https://jobs.elastic.co/jobs?gh_jid=8079636 to a bare board URL, so ONE applied Elastic role
 would block EVERY Elastic role forever. KEEP identifier parameters — gh_jid, Lever ids, Ashby
 ids — they are what make the URL a specific job.
-Also block the ATS board domain when it differs from the marketing domain: a role stored under
-twilio.com may be reposted on stytch.com's own board.
+The same posting often has two URLs — the company's careers page and the raw ATS URL, or a
+marketing domain and a board domain. TREAT THOSE AS THE SAME JOB and exclude the second one. The
+test is whether it is the same ROLE at the same employer, not whether the string matches. This is
+the only place domains enter the comparison, and it exists to catch one job wearing two URLs, not
+to block an employer.
 
-PRINT THE SET SIZE AND THE TABLE ROW COUNT IN YOUR REPORT.
+PRINT THE SET SIZE AND THE TABLE ROW COUNT IN YOUR REPORT. Also print HOW MANY DISTINCT COMPANIES
+appear in the table, and state plainly that this number blocks nothing.
 
 === STEP 3 — SIX EXCLUSIVE DISCOVERY LANES ===
 Two subagents at a time. Each gets ONE lane and is forbidden the others.
@@ -400,7 +424,9 @@ NOT cross-posted to LinkedIn or Indeed; posted hours ago rather than days; stack
 specific enough to filter people out ("React Native plus Expo plus AWS" rather than "Full Stack
 Engineer"); no press coverage and no recognisable name; unusual title, since "Product Engineer",
 "Founding Engineer" and "First Engineer" get searched far less than "Software Engineer".
-Apply the AUTH_SILENT penalty of -15 here.
+Apply the AUTH_REGIONAL penalty of -10 here, on low-competition, per STEP 5 rule 3. There is no
+AUTH_SILENT category any more and no other authorisation penalty. AUTH_OPEN takes no penalty and
+AUTH_BLOCKED never reaches scoring at all.
 
 === STEP 7 — GET A CV FOR EACH JOB. CHECK THE LIBRARY BEFORE TAILORING. ===
 NOW read cv/cv-master.tex, cv/resume.cls and resumes/index.md (deferred per rule B).

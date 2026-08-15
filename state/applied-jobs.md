@@ -4,14 +4,20 @@ Authoritative record of every job prepared or submitted. Read this BEFORE resear
 
 ## How to use
 
-Build two blocked sets from the table:
-  BLOCKED_COMPANY_DOMAINS - every company_domain value
-  BLOCKED_JOB_URLS - every job_url value
+Build ONE blocked set from the table:
+  BLOCKED_JOB_URLS - every job_url value, regardless of status
 
-Reject a candidate if its company domain is blocked, or its job URL is blocked.
+Reject a candidate ONLY if its job URL is blocked. *** DO NOT BUILD A COMPANY BLOCK LIST
+FROM THIS TABLE. *** Changed 15 August 2026, and the change matters: blocking by company
+meant one prepared-and-never-submitted row closed an entire employer forever. A single
+7 August row had put all 200 Twilio postings out of reach, 87 of them engineering and every
+one remote. Twenty-seven rows had closed twenty-seven companies.
 
-One company gets ONE application at a time. If a company already appears here with any
-status other than "rejected", do not apply to a second role there in the same month.
+A DIFFERENT ROLE AT A COMPANY ALREADY IN THIS TABLE IS A GOOD APPLICATION. Prepare it.
+The only limit is packet shape: at most three roles from one company in a single run.
+
+Company-level blocking lives in exactly two places - the permanent exclusions table below,
+and state/standing-rejected.md. Nowhere else.
 
 Companies in claude/do-not-contact.md ARE allowed here. That list governs cold email
 only, not job applications. But do check it: if a company appears there, Faisal has

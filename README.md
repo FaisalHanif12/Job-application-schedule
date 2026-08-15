@@ -91,11 +91,15 @@ applied forever.
 ## The daily flow
 
 **09:00 Karachi, unattended.** Preflight probe, then reads its state files and builds the
-exclusion set from every row of `applied-jobs.md` regardless of status, blocking on job URL *or*
-company domain. Six exclusive discovery lanes, two subagents at a time. Every posting opened and
+exclusion set from every row of `applied-jobs.md` regardless of status, **blocking on job URL
+only — never on company**. A different role at the same employer is a good application, and
+company-level blocking (which was the rule until 15 August) had sealed off 27 employers,
+including all 200 of Twilio's postings, on the strength of one prepared row each. Six exclusive
+discovery lanes, two subagents at a time. Every posting opened and
 cross-checked against the ATS's live feed. Filters: remote, HQ allow-list, in-field, posted
 within 48 hours at the absolute outside. Work authorisation classified three ways, with
-`AUTH_BLOCKED` dropped and `AUTH_SILENT` capped at half the packet.
+`AUTH_BLOCKED` dropped, `AUTH_REGIONAL` included with its restriction quoted and a 10-point
+low-competition penalty, and no cap on how much of the packet is regional.
 
 Then — **before tailoring anything** — it checks `resumes/index.md`. A CV already built for this
 exact posting is reused verbatim. A CV built for the same archetype and a close stack becomes the
