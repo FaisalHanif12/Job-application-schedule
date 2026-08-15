@@ -111,16 +111,29 @@ seeing that job again.
 
 ## Calibration
 
-| Date | Screened | Delivered |
-|---|---|---|
-| 7 August 2026 | 300+ postings | 10 |
-| 13 August 2026 | 150+ postings | **0** |
+| Date | Screened | Delivered | Yield |
+|---|---|---|---|
+| 7 August 2026 | 300+ postings | 10 | 3.3% |
+| 13 August 2026 | 150 postings | **0** | 0% |
+| 15 August 2026 (am) | 158 postings | **0** | 0% |
+| 15 August 2026 (pm) | 55 postings | **0** | 0% |
 
-The binding constraint is not freshness and it is not remote status. It is that almost every
-remote engineering role is locked to a country list that excludes Pakistan.
+**The zeros were arithmetic, not bad luck.** Yield on this funnel runs at roughly 3 percent, so
+ten packets requires screening about three hundred postings. Fifty-five screened predicts 1.8
+jobs; a hundred and fifty predicts five. Every zero day ran the full discovery ladder and then
+stopped early, on a rung boundary rather than on a count.
 
-**Ten real jobs is a good day. Zero is a real outcome and gets reported as one. Twenty produced
-by relaxing the filters wastes his mornings** on applications that were never going to be read.
+The 15 August afternoon run settles the older theory. Its own AUTH tally was OPEN 1, REGIONAL
+3–4, BLOCKED 2 — work authorisation was no longer killing anything, because nothing survived
+freshness and stack long enough to be classified. The constraint is funnel volume.
+
+Hence the floor in `routine/INSTRUCTIONS.md`: **the run may not report fewer than ten until it
+has screened at least three hundred postings.** The ladder terminates on a screened count, never
+on having finished its rungs.
+
+**Ten real jobs is the target and the run spends whatever it takes to reach it. Zero is only an
+acceptable answer after three hundred postings have actually been looked at** — and a packet
+padded by dropping the evidence bar is still worse than a short one.
 
 As of the initial commit, `state/applied-jobs.md` carries **27 prepared roles** from 6 and 7
 August, none of them submitted.

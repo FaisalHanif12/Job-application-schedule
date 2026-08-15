@@ -64,6 +64,30 @@ honestly, the run delivers short and says why.
 Leave headroom on this account. Stage 2 draws on it too, browser automation is not cheap, and
 Faisal uses the account himself.
 
+## The environment — two settings that are not on this form
+
+Both live on the **cloud environment** attached to the routine, not on the routine form itself,
+and both changes apply to **new sessions only**. A resumed session keeps whatever it started with.
+
+**Network access must be `Full`.** On the default `Trusted` level the egress proxy allows package
+registries, GitHub and cloud SDKs and nothing else — the 15 August morning run returned
+`EGRESS_BLOCKED` for every job API it tried, and for `example.com` besides. Note that the GitHub
+proxy and MCP connector traffic bypass the allowlist entirely, and `WebSearch` runs through
+Anthropic's servers, so a blocked environment still looks half-alive: searches return results and
+commits push, while every `WebFetch` of an ATS feed fails. `Custom` would work too, but the feed
+list changes as slugs are harvested, and an allowlist that has to be edited whenever the run finds
+a new company is a standing source of silent zero days.
+
+**Put LaTeX in the Setup script field:**
+
+```
+apt-get update && apt-get install -y texlive-latex-base
+```
+
+`pdflatex` is not preinstalled. Every run so far has installed it via apt mid-flight, which spends
+tool calls out of the same budget that is meant to be buying screened postings, and leaves the CV
+gate one apt failure away from a run that finds ten jobs and ships none.
+
 ## After you create it
 
 Let it fire once and read the report before trusting it. Check in order:

@@ -14,10 +14,24 @@ finish the job. Finish the whole run yourself in one pass.
 8. SUBAGENTS RESEARCH ONLY. Every file write and the git commit are done by YOU, the main
    agent, sequentially. Parallel writes to one file lose rows silently, with no error.
 
+*** BEFORE ANYTHING ELSE: CHECK FOR AN UNMERGED PR FROM A PREVIOUS RUN. ***
+This routine writes its changes as a pull request rather than committing straight to the
+default branch. That is good — Faisal sees the diff before it lands — but it creates one trap.
+If a previous run's PR has NOT been merged, the state files on the default branch are STALE:
+they do not contain yesterday's prepared jobs. An exclusion set built from stale state means
+preparing the same jobs twice, which is the single failure this whole pipeline exists to avoid.
+So: look for an open PR from an earlier run of this routine. If you find one, say so at the TOP
+of your report IN CAPITALS, name the PR, and build your exclusion set from the UNION of the
+default branch and that PR's version of state/applied-jobs.md. Do not silently proceed on the
+default branch alone.
+
 === WHERE EVERYTHING LIVES — this repository is the memory ===
   state/applied-jobs.md            dedup tracker + institutional memory. THE critical file.
   state/job-application-profile.md filters, standing answers, SALARY, Stage 2 runbook
   state/standing-rejected.md       companies already checked and rejected
+  sources/ats-boards.md            VERIFIED live company boards with measured engineering counts.
+                                   START HERE. This is where the in-field volume comes from, and
+                                   it is the difference between ten jobs and a zero day.
   cv/cv-master.tex                 the master CV, ready to tailor
   cv/resume.cls                    the custom class. \documentclass{resume} needs this file.
   resumes/index.md                 catalogue of every CV ever tailored. CHECK BEFORE TAILORING.
@@ -52,10 +66,68 @@ than two days enters the packet, for any reason, however good the role looks. Ap
 24 hours gets roughly a 14 percent response rate against 7 percent after a week, and remote
 software roles pull three to eight hundred applications inside the first day. A three-day-old
 posting has already been read by hundreds of people and is not worth his morning.
-REALITY CHECK, do not fight it: 7 August screened 300+ postings and delivered 10. 13 August
-screened 150+ and delivered 0. Almost every remote engineering role is locked to a country
-list that excludes Pakistan. TEN REAL JOBS IS A GOOD DAY. ZERO IS A REAL OUTCOME and must be
-reported as one. Twenty produced by relaxing filters wastes his mornings.
+*** TEN IS THE TARGET AND YOU DO NOT STOP AT THE FIRST EMPTY SWEEP. ***
+Two runs in a row delivered zero after screening 150+ postings each. Faisal is paying for those
+runs. A zero day that cost a full budget is the worst outcome this task can produce, so before
+you may report fewer than ten you MUST work down this ladder and report which rungs you used:
+
+  RUNG 1  All six discovery lanes at 24h freshness.
+  RUNG 2  Still short — extend to 48h across every lane. 48h IS THE ABSOLUTE CEILING.
+  RUNG 3  Still short — harvest 20+ NEW ATS slugs you have never queried, from WebSearch on
+          site:job-boards.greenhouse.io, site:jobs.lever.co, site:jobs.ashbyhq.com,
+          site:apply.workable.com plus your keywords, and run them.
+  RUNG 4  Still short — sweep the bulk aggregator APIs listed under DISCOVERY, paging deeper
+          than the first page. These carry hundreds of roles per call.
+  RUNG 5  Still short — widen titles: include "Software Engineer II", "Senior Software
+          Engineer", "Web Developer", "Application Developer", "Platform Engineer".
+  RUNG 6  Still short — spend the overrun budget up to 320 calls on more slugs and deeper paging.
+
+*** THE LADDER TERMINATES ON AN IN-FIELD SCREENED COUNT, NOT ON RUNG COMPLETION. ***
+YOU MAY NOT REPORT FEWER THAN TEN UNTIL YOU HAVE SCREENED AT LEAST 300 IN-FIELD POSTINGS.
+
+IN-FIELD means a software engineering role — developer, engineer, SRE, DevOps, data, ML, mobile,
+platform, architect. *** A GENERAL POSTING YOU SKIPPED BY ITS TITLE DOES NOT COUNT. *** If a feed
+hands you an Executive Assistant, a Medical Biller and a Physiotherapist, you have screened zero.
+This distinction is the whole finding. Read the next paragraph before you plan the run.
+
+*** WHERE THE ZEROS ACTUALLY CAME FROM: SOURCE DENSITY, MEASURED 15 AUGUST. ***
+The general remote aggregators are roughly ONE IN TEN software engineering. A 20-posting page of
+Himalayas returned 2 engineering roles; the rest were sales, admin, clinical and design. A single
+call to ONE company ATS board returns 50 to 90 engineering roles:
+
+    Himalayas, one page          20 postings  ->   2 in-field   (1 call)
+    Greenhouse gitlab            150 postings ->  73 in-field   (1 call)
+    Greenhouse grafanalabs       149 postings ->  89 in-field   (1 call)
+    Greenhouse databricks        150 postings ->  89 in-field   (1 call)
+
+THAT IS A THIRTY-FOLD DIFFERENCE IN YIELD PER TOOL CALL. Every previous run built its candidate
+list out of aggregators and search results, so it spent its whole budget to look at a few dozen
+in-field roles and then reported a zero that was arithmetically guaranteed. You cannot reach 300
+in-field postings through the aggregators. You reach it through ATS boards, easily, in about
+twenty calls.
+
+*** SO THE SOURCE ORDER IS FIXED AND IS NOT YOURS TO REORDER. ***
+  FIRST   sources/ats-boards.md in this repo. It is a VERIFIED list of live company boards with
+          their measured engineering counts. Start at the top and work down. These are already
+          checked; do not spend calls re-deriving them.
+  SECOND  new ATS slugs you harvest, appended to that file at the end of the run.
+  THIRD   the bulk aggregators, for coverage of companies not on any list.
+  LAST    WebSearch — to DISCOVER company names and slugs, never to build the candidate list.
+          In the 15 August run, 14 of 55 search-sourced candidates were dead listings still
+          indexed by search engines. Every one cost a fetch and returned nothing.
+
+Count every IN-FIELD posting you actually evaluate against a filter and REPORT THE NUMBER. If you
+have run every rung and are still below 300 in-field, keep opening boards from sources/ats-boards.md
+until you reach 300 or hit the 320-call ceiling, whichever comes first.
+
+ONLY after all six rungs AND 300 screened may you report fewer than ten. The report must name
+every rung, its yield, and the total screened. "The market was empty" is only credible with
+that evidence attached.
+
+*** WHAT THIS DOES NOT PERMIT. *** It does not permit inventing a job, a date, a company or an
+applicant count. It does not permit packeting a posting you could not open. It does not permit
+an AUTH_BLOCKED role. Working harder is the only lever — never a lower evidence bar. If ten
+honest jobs do not exist after six rungs, deliver what you have and show your work.
 
 === BUDGET: PLANNED 250 TOOL CALLS, ABSOLUTE CEILING 320 ===
 This routine is the ONLY scheduled task on its account. It does not share a usage budget with
@@ -184,6 +256,21 @@ PRINT THE SET SIZE AND THE TABLE ROW COUNT IN YOUR REPORT.
 
 === STEP 3 — SIX EXCLUSIVE DISCOVERY LANES ===
 Two subagents at a time. Each gets ONE lane and is forbidden the others.
+
+*** BEFORE YOU OPEN A SINGLE LANE, READ sources/ats-boards.md AND HAND EACH LANE ITS SLUGS. ***
+That file is a verified, measured list of live company boards. Lanes 1, 2 and 3 are where the
+in-field volume comes from and they must be run FIRST and run WIDE — every board in the file for
+their platform, not a sample. Lane 4 is a supplement, not the backbone. A run that opens six
+aggregator pages and four ATS boards has inverted this and will report a zero.
+
+*** NEVER GUESS A SLUG AND THEN TRUST WHAT COMES BACK. ***
+On 15 August, WebFetch on invented slugs returned plausible, well-formed, ENTIRELY FABRICATED
+job listings — identical postings appeared under two different companies. A guessed slug that
+"works" is the most dangerous result in this run, because a fabricated job reaches the packet
+looking exactly like a real one. CONFIRM every board by checking that the postings carry a URL
+whose domain matches the platform and the company: boards.greenhouse.io/SLUG, jobs.lever.co/SLUG,
+jobs.ashbyhq.com/SLUG. If you cannot confirm that, the board is UNVERIFIED and everything from
+it is discarded. Do not report it, do not packet it, do not add it to sources/ats-boards.md.
   Lane 1  Greenhouse only.  https://boards-api.greenhouse.io/v1/boards/{token}/jobs?content=true
           -> title, location, first_published
   Lane 2  Ashby only.       https://api.ashbyhq.com/posting-api/job-board/{token}
@@ -191,13 +278,25 @@ Two subagents at a time. Each gets ONE lane and is forbidden the others.
                                                          anywhere. Disproportionately useful.
   Lane 3  Lever + Workable. https://api.lever.co/v0/postings/{token}?mode=json -> createdAt
           https://apply.workable.com/api/v1/widget/accounts/{token}?details=true -> published_on
-  Lane 4  Worldwide-prefiltered aggregators only. CONCEPTUALLY START HERE — they index the exact
-          constraint that kills 95% of candidates.
+  Lane 4  BULK AGGREGATOR APIs. SUPPLEMENT ONLY — they carry hundreds of roles per call but only
+          about ONE IN TEN is in-field, so they are expensive per engineering role and cannot
+          carry the run. Use them to reach companies no ATS list covers. All verified live on
+          15 August 2026 unless marked.
+          https://himalayas.app/jobs/api?limit=20&offset=N
+            -> title, companyName, pubDate, applicationLink, locationRestrictions, seniority,
+               minSalary, maxSalary, currency, employmentType, categories.
+            locationRestrictions IS A STRUCTURED FIELD — use it directly for the AUTH
+            classification, and currency directly for the pay-currency rule. PAGE DEEPLY with
+            offset; the first page is dominated by non-engineering US roles, so filter on
+            categories and keep paging rather than judging the feed by page one.
           https://himalayas.app/jobs/api/search?worldwide=true&sort=recent
-          https://himalayas.app/jobs/api?limit=20&offset=N -> pubDate
-          WeWorkRemotely "Anywhere in the World" region; RemoteOK worldwide filter.
-          https://remoteok.com/api is readable plain JSON but heavily polluted — filter hard and
-          never trust its dates over an ATS date. DO NOT use remotive.com, robots-blocked.
+          https://www.arbeitnow.com/api/job-board-api
+            -> slug, company_name, title, description, remote, url, tags, job_types, location,
+               created_at (unix). Strong European coverage; filter remote=true.
+          DO NOT use remoteok.com/api — it returned 403 throughout the 15 August run. Skip it.
+          WeWorkRemotely "Anywhere in the World" region.
+          DO NOT try remotive.com or jobicy.com — both ROBOTS_DISALLOWED, verified 15 August.
+            Attempting them wastes calls and returns nothing.
   Lane 5  YC / Work at a Startup / Wellfound only.
   Lane 6  Hacker News "Who is hiring" current thread + companies with funding news in the last
           14 days. Nobody else touches HN.
@@ -225,27 +324,49 @@ feed, which means the role actually closed.
 
 === STEP 5 — HARD FILTERS ===
 1. Remote only. No on-site, no hybrid, no relocation.
-2. Company HQ in: United States, United Kingdom, Ireland, any EU or EEA country, Switzerland,
-   Norway, United Arab Emirates. THAT ALLOW-LIST IS THE WHOLE RULE — anything not on it,
-   INCLUDING CANADA, is out. Ignore older wording about "never Asia"; the UAE is permitted.
-3. WORK AUTHORISATION — classify every surviving posting into exactly one of three.
-   A pure hard gate here is near-unsatisfiable, because Greenhouse, Lever and Workable expose no
-   work-authorisation field at all, and it is the main reason 13 August returned zero.
-     AUTH_OPEN    a structured field or explicit wording affirmatively permits worldwide or
-                  non-resident hiring. Ashby's isRemote counts. A stated "hiring anywhere"
-                  counts. A country list that INCLUDES Pakistan counts. Packet these normally.
-     AUTH_BLOCKED affirmatively excludes him: "must be US-based", "right to work in the UK
-                  required", "EU residents only", "Remote (US)", a country list naming many
-                  countries but NOT Pakistan, or a timezone band requiring more than 4 hours of
-                  US overlap from UTC+5. A COUNTRY LIST THAT OMITS PAKISTAN IS A REJECTION, NOT
-                  A NEAR MISS. Drop entirely. Never packet.
-     AUTH_SILENT  says nothing either way. The common case. May be packeted, but NO MORE THAN
-                  HALF THE PACKET may be AUTH_SILENT, and each carries a FIFTEEN-POINT PENALTY
-                  on its low-competition score. LABEL EVERY AUTH_SILENT JOB AS SUCH IN THE
-                  PACKET so Faisal knows the question is open before he spends time on it.
-   An empty locationRestrictions field does NOT mean worldwide. Report the three counts separately.
-   The point of this design: a zero-job day should now mean the market was empty, not that a
-   filter was unsatisfiable.
+2. GEOGRAPHY AND PAY CURRENCY.
+   Company HQ in: United States, United Kingdom, Ireland, Canada, Australia, any EU or EEA
+   country, Switzerland, Norway, United Arab Emirates. PREFER THE UNITED STATES — a US role
+   scores higher than an equivalent one elsewhere, all else equal.
+   *** PAY MUST BE IN USD, EUR OR GBP. *** If the posting STATES compensation in another
+   currency — CAD, AUD, INR, PKR, SGD, anything else — REJECT IT and log "wrong pay currency".
+   Faisal is paid in hard currency and a CAD or AUD salary defeats the point of the search.
+   Silence is NOT a rejection: most postings state no salary at all, and those stay in. Only an
+   explicitly stated non-USD/EUR/GBP figure drops a job. Canada and Australia are on the HQ list
+   because their companies frequently pay international contractors in USD; if such a posting
+   states CAD or AUD, it goes.
+3. WORK AUTHORISATION — REVISED 15 AUGUST 2026. READ THE WHOLE RULE.
+   *** A REGION RESTRICTION ALONE NO LONGER BLOCKS A JOB. ***
+   The previous version dropped anything whose location list omitted Pakistan. Measured against
+   the live market that discarded essentially everything: a sample of 17 consecutive live remote
+   postings on 15 August showed 17 of 17 country-restricted and 0 open worldwide. Runs on
+   13 and 15 August each screened 150+ postings and delivered ZERO. The filter, not the market,
+   was the binding constraint. Faisal has decided he would rather apply and be screened out than
+   receive nothing. Classify into three:
+
+     AUTH_OPEN     affirmatively permits worldwide or non-resident hiring. Ashby's isRemote,
+                   a stated "hiring anywhere", an empty or worldwide locationRestrictions, or a
+                   country list that includes Pakistan. Packet normally, no penalty.
+
+     AUTH_REGIONAL restricted to a region on the HQ allow-list — "Remote (US)", "Remote, UK",
+                   "EU only", a country list naming allow-list countries but not Pakistan — with
+                   NO explicit demand for local work authorisation. THESE ARE INCLUDED. Label
+                   every one in the packet with its exact restriction quoted verbatim, so Faisal
+                   sees the odds before spending time. Apply a TEN-POINT low-competition penalty,
+                   not because the role is worse but because the odds of a reply are lower.
+                   There is NO CAP on how much of the packet may be AUTH_REGIONAL.
+
+     AUTH_BLOCKED  the posting EXPLICITLY demands something he cannot provide: "must be
+                   authorised to work in the US", "right to work in the UK required", "must
+                   hold EU citizenship", "must reside in <country>", "no visa sponsorship
+                   available" tied to a residency requirement, on-site or hybrid presence, or a
+                   timezone band requiring more than 4 hours of US overlap from UTC+5.
+                   Drop entirely. Never packet.
+
+   The test between REGIONAL and BLOCKED is simple: does the posting merely say WHERE the role is
+   remote, or does it state a REQUIREMENT ABOUT THE PERSON? Where alone is REGIONAL. A
+   requirement about the person is BLOCKED. When genuinely ambiguous, treat it as REGIONAL and
+   say so in the packet. Report all three counts separately.
 4. Freshness per the target block above.
 5. IN FIELD. The role must sit in one of these, and this list is the whole scope:
      - software engineering generally, at any level below staff
@@ -330,10 +451,17 @@ For each job, in a scratch working directory:
      exists in no TeX distribution — without this file nothing compiles.
   2. Write the tailored <company-slug>.tex
   3. pdflatex -interaction=nonstopmode <company-slug>.tex   (TWICE)
-  4. ASSERT the PDF exists and is EXACTLY ONE PAGE. Two pages means drop a project and
-     recompile. A compile error means FIX IT — never ship a broken CV.
+  4. *** ASSERT THE PDF EXISTS AND IS EXACTLY ONE PAGE. THIS IS NOT OPTIONAL. ***
+     Two pages means DROP A PROJECT AND RECOMPILE. Repeat until it is one page. A two-page CV
+     never enters the packet and never reaches Stage 2.
+     A compile error means FIX IT — never ship a broken CV, and never substitute plain text,
+     markdown or any other format for the LaTeX. THE FORMAT IS THE cv/resume.cls LATEX TEMPLATE
+     AND NOTHING ELSE. Every tailored CV compiles from that class, keeps its layout, fonts and
+     structure, and changes only the four %% TAILORABLE sections.
      Note: the untailored master runs to 2 pages with all five projects. Dropping projects to
-     reach one page is expected and is what the PROJECTS marker is for.
+     reach one page is expected and is exactly what the PROJECTS marker is for.
+     If a job survives every filter but its CV cannot be made to compile to one page, REPORT
+     THAT JOB AS BLOCKED rather than shipping a CV in the wrong shape.
   5. SAVE THE TAILORED SOURCE INTO THE LIBRARY as
      resumes/<company-slug>-<role-slug>.tex, so tomorrow's run can reuse it.
   6. Record in the packet THAT IT COMPILED, the page count, the library filename, and whether
@@ -401,6 +529,16 @@ ai-integration, cloud-infra, generalist.
 For a REUSED CV, do not add a second copy of the file — add the index row pointing at the
 existing file so the reuse is visible in the history.
 
+=== STEP 11c — APPEND ANY NEW VERIFIED BOARDS TO sources/ats-boards.md ===
+Every board you opened today that was NOT already in that file, that returned real postings, and
+whose postings carried a platform URL matching the company, gets a row: company, endpoint, total
+jobs, engineering count, and the location wording quoted VERBATIM. Tier 1 if it hires outside its
+own borders, Tier 2 otherwise.
+A slug that 404d goes in the dead list in the same file, so tomorrow does not pay for it again.
+*** DO NOT ADD A BOARD YOU COULD NOT CONFIRM. *** An unverified slug in this file will be trusted
+by every future run, and fabricated postings are the one failure mode this whole pipeline cannot
+detect on its own.
+
 === STEP 12 — COMMIT ===
 Commit everything you changed with a message like
 "Stage 1 run <YYYY-MM-DD>: N jobs packeted". If the commit fails, SAY SO AT THE TOP OF YOUR
@@ -419,16 +557,25 @@ applied-jobs row becomes a duplicate application tomorrow.
 
 === STEP 13 — REPORT. Short, plain English, no em dashes. ===
   a) Preflight block: which tools ALIVE, which DEAD with the exact error
+  a2) TOTAL IN-FIELD POSTINGS SCREENED, and separately the raw postings seen. IN-FIELD IS THE
+     HEADLINE NUMBER. Below 300 in-field with fewer than ten jobs delivered means the run was
+     unfinished, not that the market was empty. Say so plainly, in those words.
+  a3) HOW MANY ATS BOARDS FROM sources/ats-boards.md YOU OPENED, out of how many are in the file.
+     A run that opened fewer than twenty boards and reported a zero did not do the work.
   b) Exclusion set size, and applied-jobs row count before and after
   c) Postings screened, and how many dropped for each reason: not remote, wrong HQ, too old,
      undated and uncorroborated, AUTH_BLOCKED, stack mismatch, already applied, dead link —
      with UNREADABLE counted separately, never folded into a reject bucket
-  d) The three AUTH counts, and how many AUTH_SILENT entered the packet
+  d) The three AUTH counts — OPEN, REGIONAL, BLOCKED — and how many AUTH_REGIONAL entered the
+     packet, each with its restriction quoted verbatim
+  d2) WHICH ESCALATION RUNGS YOU RAN and what each yielded. Mandatory whenever fewer than ten
+     jobs are delivered. A short day without this section is an incomplete report.
+  d3) How many postings were dropped for stating pay in a currency other than USD, EUR or GBP
   e) Jobs delivered with both scores
   f) CVs compiled successfully, and any that failed
   g) Any judgement call and what you assumed
   h) Which writes landed, which were deliberately skipped, and whether the commit succeeded
-  i) Tool health, and TOTAL TOOL CALL COUNT against the planned 120 and the absolute 150, with
+  i) Tool health, and TOTAL TOOL CALL COUNT against the planned 250 and the absolute 320, with
      the size of any overrun and a one-line reason for it
   j) Approximate subagent tokens used, so cost stays visible
 
