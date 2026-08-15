@@ -76,6 +76,9 @@ the top of the report.
 | scrambly.io | Scrambly | Senior Backend Engineer (Node.js) | https://himalayas.app/companies/scrambly/jobs/senior-backend-engineer-node-js | Very fresh, Himalayas pubDate matched live updatedAt | 88 | 70 | 2026-08-07 | prepared |
 | powerprozesse.de | Powerprozesse | Senior Full-Stack AI-Developer | https://remotive.com/remote/jobs/software-development/senior-full-stack-ai-developer-4460060 | Posted yesterday per Remotive | 90 | 75 | 2026-08-07 | prepared |
 | remote.com | Remote.com | Senior DevOps Consultant (Remote Build) | https://remote.com/openings/7763713003 | Posted 2 days ago per Remote.com's own careers page | 45 | 25 | 2026-08-07 | prepared |
+| vanta.com | Vanta | Sr. Backend Software Engineer, Integrations Platform | https://jobs.ashbyhq.com/vanta/e76ea2d6-a514-458c-87fd-0792e50ae6bf | 2026-08-14T22:41:07Z per Ashby publishedAt | 66 | 40 | 2026-08-15 | prepared |
+| vanta.com | Vanta | Sr. Fullstack Software Engineer, Integrations Platform | https://jobs.ashbyhq.com/vanta/539cb2a8-b704-4f39-af0d-2bee5b529d1d | 2026-08-14T22:41:27Z per Ashby publishedAt | 68 | 40 | 2026-08-15 | prepared |
+| auditdata.com | Auditdata | Full-Stack Software Engineer (React Native/React/.Net) | https://himalayas.app/companies/auditdata/jobs/full-stack-software-engineer-react-native-react-net | 2026-08-15, same day | 52 | 65 | 2026-08-15 | prepared |
 
 ## Rejected on 6 August with a reason worth keeping
 
@@ -191,3 +194,72 @@ Near-misses worth a periodic recheck rather than a permanent exclusion: Buffer (
 React/TypeScript roles, worldwide, just outside the freshness window on 7 August - recheck
 next run), Canonical Web Frontend Engineer (Home based - Worldwide, strong stack match,
 just stale today), Tether (San Salvador HQ, otherwise a perfect fit, blocked on HQ only).
+
+## 15 August 2026 (second run, morning) - 3 job packets prepared, thin day
+
+Screened 1701+ in-field postings across 47 ATS boards (Tier 1 + Tier 2 from
+sources/ats-boards.md plus newly harvested slugs), a Himalayas worldwide-remote deep sweep
+(~700 raw postings, deduplicated), Arbeitnow, and two dedicated discovery-lane subagents
+(YC/Work at a Startup/Wellfound, and Hacker News "Who is hiring" August 2026 thread). All
+escalation rungs were run: 24h sweep, 48h ceiling sweep, new ATS slug harvest via WebSearch,
+deeper aggregator paging, and widened titles (Senior Software Engineer, Platform Engineer,
+Web Developer, Application Developer all included in the search). Only 3 postings survived
+every hard filter. This is a genuinely thin day, not a filter that needs relaxing - see the
+session report for the full rung-by-rung breakdown.
+
+Rejected today, worth keeping:
+
+- Companies already in standing-rejected.md that still turned up on sources/ats-boards.md
+  Tier 1 (do not re-fetch without new evidence): GitLab, Canonical, Supabase, Buffer,
+  Automattic, Zapier, PostHog, Resend, Linear, Railway, Elastic.
+- Wrong pay currency, explicit in the posting: Samsara "Senior Software Engineer" Remote -
+  Canada, id 8130819, states "$184,800 CAD" - also 8+ years required, doubly disqualified.
+- Stack mismatch, core requirement not a nice-to-have: Grafana Labs "Software Engineer -
+  Platform Metal" (Ireland/Spain/UK remote, fresh at 35h) - bare-metal/Kubernetes
+  infrastructure role, no JS/TS/React/Node found in the posting; Reveal Technology "Full
+  Stack Engineer (Ruby/React)" via Lever - Ruby is core; REW Technology "Senior Platform
+  Engineer (Remote EU)" via Himalayas - AWS/Apigee/Kubernetes/C#/.NET core, no JS at all;
+  WorkOS "Design Engineer" - TypeScript/React listed only as "Bonus", role is primarily
+  Figma/design-tool work, not software engineering.
+- AUTH_BLOCKED, explicit: Databricks "Sr. Forward Deployed Engineer - Public Sector" (USCA,
+  fresh at 25.9h) - "U.S. citizenship and eligibility for a U.S. government secret clearance
+  are required"; 83 Sciences (YC S26) Full-Stack Software Engineer - "US work authorization
+  required"; Ooak Data (YC S26) - "US citizens or visa holders only," also contractor not
+  FTE; MochaCare (YC W26) - onsite SF 6-7 days/week plus US citizen/visa only.
+- Geography, region not on the allow-list even though the posting itself is otherwise
+  fine: Rhizome (rhizome.ai, YC W26) "Founding Full Stack AI Engineer" - region-gated to
+  Brazil/Colombia/Argentina/Mexico/Peru/Chile/Costa Rica/Uruguay, none of which are on the
+  US/UK/Ireland/Canada/Australia/EU/EEA/Switzerland/Norway/UAE allow-list; Squad|Bowery
+  "Sr. Frontend Engineer (Next.js/React)" via Ashby - "Remote in Argentina" only.
+- Staff-level or too senior, out of scope ("any level below staff"): Stripe "Staff Software
+  Engineer, Link"; Reddit "Staff Software Engineer, Observability" and "Staff Backend
+  Engineer, Compliance Engineering"; Vanta postings note as an honest stretch rather than a
+  hard reject - see the packet.
+- Not remote / hybrid despite a "remote" search hit: Stripe "Backend Engineer, Link (US)"
+  (NYC/Seattle/SF/Toronto offices listed, not a remote posting); Cloudflare "Procurement
+  Systems Developer" and "Software Engineer-" (both Hybrid); Squad's other Argentina roles.
+- Stale search results that 404d on the live board (dead links, never packeted): Knock
+  "Senior Full Stack Software Engineer" (job-boards.greenhouse.io/knock/jobs/5745759004,
+  404); You.com and Xapo Bank "Front-End Web Developer" roles (search-indexed but not present
+  on the companies' live Greenhouse feeds - Xapo's only live Software Engineer role is the
+  one already in this table from 6 August).
+- Suspected job-board-mill pattern, same signature flagged on 7 August (careerswift.ai):
+  Pragmatike (jobs.ashbyhq.com/pragmatike) posts ~70 near-identical generic roles ("Ex YC
+  Founder - Engineer", "Founding Product Engineer", "Senior/Staff/Principal/Lead" ladders of
+  the same title) across dozens of unrelated specialties, countries and seniority levels,
+  all stamped "SF, YC" or "YC experience" - treated as untrustworthy and skipped entirely,
+  not packeted. Worth a permanent standing-rejected entry.
+- Internship, not a fit for a working professional: Replit "Software Engineering Intern
+  (Summer 2027)".
+- No qualifying HN "Who is hiring" (August 2026 thread) posting combined genuine remote +
+  in-field + matching stack + funding news within the last 14 days; closest misses
+  (Chronograph, Spacelift, Category Labs, FanPad, SmarterDx) all failed on stack (Go/Ruby/
+  Angular/.NET core) or on the 14-day funding-freshness window - see the subagent's report
+  in the session log.
+
+New verified ATS slugs found today, not previously in sources/ats-boards.md: neon, workos,
+e2b, baseten, airbyte, prefect, coder, circleci, scaleai (Greenhouse), raycast (Ashby, live
+but 0 postings that day). Appended to sources/ats-boards.md. Dead slugs tried and 404d:
+sst, convex, planetscale, prisma, fly, webflow, framer, replicate, together-ai, fireworks-ai,
+appwrite, strapi, hasura, dagster, scale, wandb, huggingface, digitalocean, groq,
+perplexity-ai, windsurf, julius-ai.

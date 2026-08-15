@@ -81,6 +81,32 @@ the raw in-field count comes from.
 **Tier 1 + Tier 2 is roughly 700 engineering postings for about 40 tool calls.** The 300 in-field
 floor is comfortably reachable. It was never the hard part; looking in the wrong place was.
 
+## Added 15 August 2026 (second run) — newly verified
+
+Also verified live and real (postings carry `jobs.ashbyhq.com/SLUG` or `boards-api.greenhouse.io`
+URLs matching the company) but **mostly onsite/hybrid at a specific office**, so low
+worldwide-remote value — kept for completeness, not promoted to Tier 1.
+
+| company | endpoint | total | eng | location wording |
+|---|---|---|---|---|
+| Prefect | `api.ashbyhq.com/posting-api/job-board/prefect` | 6 | 4 | `Remote` |
+| ScaleAI | `boards-api.greenhouse.io/v1/boards/scaleai/jobs` | 211 | 84 | mostly named cities (SF, NYC, DC, London), not broadly remote |
+| Baseten | `api.ashbyhq.com/posting-api/job-board/baseten` | 71 | 37 | San Francisco, mostly on-site |
+| WorkOS | `api.ashbyhq.com/posting-api/job-board/workos` | 26 | 14 | `United States & Canada` (some roles), SF on-site (most) |
+| Coder | `api.ashbyhq.com/posting-api/job-board/coder` | 23 | 4 | `United States`, `United Kingdom` |
+| Airbyte | `api.ashbyhq.com/posting-api/job-board/airbyte` | 10 | 6 | `United States`, `Canada`, SF on-site |
+| E2B | `api.ashbyhq.com/posting-api/job-board/e2b` | 11 | 7 | Prague and San Francisco, mostly on-site |
+| Neon | `api.ashbyhq.com/posting-api/job-board/neon` | 6 | 3 | New York City, South Korea |
+| CircleCI | `boards-api.greenhouse.io/v1/boards/circleci/jobs` | 5 | 3 | `Remote, UK`, `Remote, Ontario, Canada` |
+| Raycast | `api.ashbyhq.com/posting-api/job-board/raycast` | 0 | 0 | board live, empty that day |
+
+**Note on this file's Tier 1 list**: eleven of the fourteen boards already in Tier 1 above
+(GitLab, Canonical, Railway, Supabase, Buffer, Automattic, Zapier, PostHog, Resend, Linear,
+Elastic) are also present in `state/standing-rejected.md` from earlier runs — the two files
+were never cross-checked against each other when Tier 1 was built. A future run should not
+spend calls re-fetching those eleven without first checking whether the rejection reason still
+applies.
+
 ## Confirmed dead — do not retry, each attempt is a wasted call
 
 **Greenhouse 404:** doordash, benchling, plaid, sourcegraph, hashicorp
@@ -88,6 +114,11 @@ floor is comfortably reachable. It was never the hard part; looking in the wrong
 **No public API on the four supported platforms:** Toptal, Crossover, X-Team, Proxify, Clevertech,
 Aerolab (Recruitee), Ghost (Homerun), Doist, Remote.com, Toggl, Chess.com
 **Blocked at the source:** remotive.com and jobicy.com (`ROBOTS_DISALLOWED`), remoteok.com (403 all day)
+
+**Greenhouse 404, added 15 August (second run):** digitalocean, huggingface, scale
+**Ashby 404, added 15 August (second run):** sst, convex, planetscale, prisma, fly, webflow,
+framer, replicate, together-ai, fireworks-ai, appwrite, strapi, hasura, dagster, wandb, groq,
+perplexity-ai, windsurf, julius-ai
 
 Two worth a retry despite failing here, because the evidence says the board is real and only the
 API identifier was wrong: **Deel** (`jobs.ashbyhq.com/deel` is live in a browser, but the
