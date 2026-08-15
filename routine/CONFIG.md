@@ -49,9 +49,20 @@ whichever session created the trigger, this form shows it as a field you can see
 
 ## Budget
 
-Planned **120** tool calls, absolute ceiling **150**. The overrun is usable only while still
-short of ten jobs, and only on work that closes the gap. It buys more searching, never a lower
-evidence bar. If ten cannot be reached honestly, the run delivers short and says why.
+Planned **250** tool calls, absolute ceiling **320**.
+
+This is a deliberate increase from the 120/150 in earlier drafts. That number was sized for a
+world where this task shared an account with two email tasks. It does not any more — it is the
+only scheduled task here, and the two email tasks run on the other account. An under-resourced
+run that reports "BUDGET REACHED" every single morning is a worse failure than a slightly
+expensive one, and 120 was roughly half of what a ten-job target actually needs.
+
+The overrun to 320 is usable only while still short of ten jobs, and only on work that closes
+the gap. **It buys more searching, never a lower evidence bar.** If ten cannot be reached
+honestly, the run delivers short and says why.
+
+Leave headroom on this account. Stage 2 draws on it too, browser automation is not cheap, and
+Faisal uses the account himself.
 
 ## After you create it
 
@@ -64,3 +75,6 @@ Let it fire once and read the report before trusting it. Check in order:
    uncommitted `applied-jobs.md` row becomes a duplicate application tomorrow.
 4. The three AUTH counts. If everything came back `AUTH_SILENT` and nothing was packeted, the
    classification is working but the market was closed that morning.
+5. The CV origin split — how many REUSED, DERIVED, FRESH. On the first run everything will be
+   FRESH and that is correct. If the library has twenty-plus entries and a run still reports
+   ten FRESH and zero DERIVED, the reuse matching is not firing and is worth looking at.

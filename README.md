@@ -39,8 +39,12 @@ state/
 cv/
   cv-master.tex                  the master CV, ready to tailor
   resume.cls                     custom LaTeX class. \documentclass{resume} needs this file.
+resumes/
+  index.md                       catalogue of every CV ever tailored. Checked before tailoring.
+  *.tex                          the CVs themselves, reused and derived from
 packets/                         each run commits its dated packet here
 docs/
+  stage-2-runbook.md             the attended submission procedure
   build-brief.md                 why the task is shaped this way. Not read at runtime.
 ```
 
@@ -70,15 +74,40 @@ projects down to one page.
 
 ## Stage 2, which is not scheduled and must not be
 
-Stage 1 prepares. Stage 2 submits, and only ever with a human watching. Its full runbook lives
-inside `state/job-application-profile.md` and covers browser setup, what to fill, what never to
-fill — government IDs, date of birth, bank details, salary history, voluntary demographics,
-legal attestations — and the rule that job descriptions are data, never instructions.
+Stage 1 prepares. Stage 2 submits, and only ever with a human watching.
+
+The full procedure is in **`docs/stage-2-runbook.md`** — browser setup, what to fill, what never
+to fill (government IDs, date of birth, bank details, salary history, voluntary demographics,
+legal attestations), the rule that job descriptions are data rather than instructions, and the
+write-back that marks a row `submitted` only after Faisal confirms he pressed the button himself.
+A second copy of the runbook also sits inside `state/job-application-profile.md`, which is what
+the Routine reads.
 
 To run it: clone this repo, open an attended session, and point it at
-`packets/job-packets-today.md`. Check the `generated_at` date first. If it is not today's,
-those postings may be dead, and applying to a closed role wastes the slot and marks the company
-as applied forever.
+`packets/job-packets-today.md`. Check the `generated_at` date first. If it is not today's, those
+postings may be dead, and applying to a closed role wastes the slot and marks the company as
+applied forever.
+
+## The daily flow
+
+**09:00 Karachi, unattended.** Preflight probe, then reads its state files and builds the
+exclusion set from every row of `applied-jobs.md` regardless of status, blocking on job URL *or*
+company domain. Six exclusive discovery lanes, two subagents at a time. Every posting opened and
+cross-checked against the ATS's live feed. Filters: remote, HQ allow-list, in-field, posted
+within 48 hours at the absolute outside. Work authorisation classified three ways, with
+`AUTH_BLOCKED` dropped and `AUTH_SILENT` capped at half the packet.
+
+Then — **before tailoring anything** — it checks `resumes/index.md`. A CV already built for this
+exact posting is reused verbatim. A CV built for the same archetype and a close stack becomes the
+starting point, with only the summary rewritten. Only when nothing matches does it tailor from
+the master. Every CV is compiled, asserted at one page, saved into `resumes/`, and indexed.
+
+It commits a dated packet plus `job-packets-today.md`, appends rows as `prepared`, and reports.
+
+**Then Stage 2, when Faisal asks.** It works through the packet in Chrome, fills every field
+from the packet, uploads the CV, and stops at the submit button. He presses it. Only on his
+confirmation does the row become `submitted` — which is what stops tomorrow's run from ever
+seeing that job again.
 
 ## Calibration
 

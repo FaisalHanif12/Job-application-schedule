@@ -20,6 +20,8 @@ finish the job. Finish the whole run yourself in one pass.
   state/standing-rejected.md       companies already checked and rejected
   cv/cv-master.tex                 the master CV, ready to tailor
   cv/resume.cls                    the custom class. \documentclass{resume} needs this file.
+  resumes/index.md                 catalogue of every CV ever tailored. CHECK BEFORE TAILORING.
+  resumes/*.tex                    the CVs themselves, reusable
   packets/                         where you write today's packet
   docs/build-brief.md              why this task is shaped the way it is. Not read at runtime.
 
@@ -44,22 +46,34 @@ rewrite a whole state file to add rows — that is how rows get lost.
    address gains.
 
 === TARGET: 10 JOBS ===
-Freshness baseline: posted within 24 hours. Stretch to 48h only after a full sweep yields
-fewer than 10, and to 72h only below 5. NEVER past 72h.
+FRESHNESS: prefer posted within 24 hours. You may go past 24h when a full sweep has not
+produced 10, but *** 48 HOURS IS THE ABSOLUTE CEILING AND IS NEVER CROSSED. *** Nothing older
+than two days enters the packet, for any reason, however good the role looks. Applying within
+24 hours gets roughly a 14 percent response rate against 7 percent after a week, and remote
+software roles pull three to eight hundred applications inside the first day. A three-day-old
+posting has already been read by hundreds of people and is not worth his morning.
 REALITY CHECK, do not fight it: 7 August screened 300+ postings and delivered 10. 13 August
 screened 150+ and delivered 0. Almost every remote engineering role is locked to a country
 list that excludes Pakistan. TEN REAL JOBS IS A GOOD DAY. ZERO IS A REAL OUTCOME and must be
 reported as one. Twenty produced by relaxing filters wastes his mornings.
 
-=== BUDGET: PLANNED 120 TOOL CALLS, ABSOLUTE CEILING 150 ===
-Work to 120. Spend it in this order: about ten for the initial reads and the exclusion set,
-the bulk on discovery and verifying postings, and FIFTEEN HELD BACK, ALWAYS, for the CV
-compiles and the writes. Research with no packet is a wasted run; a short packet is a real one.
+=== BUDGET: PLANNED 250 TOOL CALLS, ABSOLUTE CEILING 320 ===
+This routine is the ONLY scheduled task on its account. It does not share a usage budget with
+the two email tasks, which run elsewhere. That is why the ceiling is generous compared to
+earlier versions: the constraint that forced 120 no longer applies, and an under-resourced run
+that reports "BUDGET REACHED" every morning is a worse failure than a slightly expensive one.
 
-If you reach 120 and are STILL SHORT OF TEN JOBS, you may continue to 150 — but only on calls
-that will plausibly close the gap: opening a posting, checking an ATS feed, compiling a CV.
-Not on retrying something that already failed. Not on a lane that has produced nothing.
-150 IS ABSOLUTE AND IS NEVER CROSSED. Keep the fifteen-call reserve either way.
+Work to 250. Spend it in this order: about fifteen for the preflight, the reads and the
+exclusion set, the bulk on discovery and verifying postings, and THIRTY HELD BACK, ALWAYS, for
+the CV work and the writes. Research with no packet is a wasted run; a short packet is a real one.
+
+If you reach 250 and are STILL SHORT OF TEN JOBS, you may continue to 320 — but only on calls
+that will plausibly close the gap: opening a posting, checking an ATS feed, tailoring or
+compiling a CV. Not on retrying something that already failed. Not on a lane that has produced
+nothing. 320 IS ABSOLUTE AND IS NEVER CROSSED. Keep the thirty-call reserve either way.
+
+Leave headroom on the account. Stage 2 runs on it too, browser automation is expensive, and
+Faisal uses the account himself.
 
 *** THE OVERRUN BUYS MORE SEARCHING, NEVER A LOWER BAR. *** It does not permit an invented
 date, an invented applicant count, a relaxed filter, an unopened posting, or an AUTH_BLOCKED
@@ -233,8 +247,22 @@ feed, which means the role actually closed.
    The point of this design: a zero-job day should now mean the market was empty, not that a
    filter was unsatisfiable.
 4. Freshness per the target block above.
-5. Fits his stack: frontend, backend, full-stack, mobile, React Native, Node, AI/LLM
-   integration, product engineer, founding engineer.
+5. IN FIELD. The role must sit in one of these, and this list is the whole scope:
+     - software engineering generally, at any level below staff
+     - frontend
+     - backend
+     - full-stack
+     - system design and software architecture
+     - cloud, infrastructure, DevOps-adjacent product work
+     - AI and LLM integration, meaning building features on top of models
+     - mobile, React Native, Expo
+     - titles that mean "generalist engineer at a small company": product engineer,
+       founding engineer, first engineer, software engineer
+   OUT OF FIELD, reject without spending audit calls: data science and ML research,
+   pure hardware or embedded, QA-only and test-automation-only roles, security research,
+   SRE-only on-call operations, blockchain and smart contracts, game development,
+   engineering management with no hands-on component, and anything requiring a language
+   or framework he does not have where it is the core of the job rather than a nice-to-have.
 6. Full-time, part-time or contract all acceptable.
 7. Not in state/standing-rejected.md and not in the exclusion set.
 
@@ -253,8 +281,37 @@ Engineer"); no press coverage and no recognisable name; unusual title, since "Pr
 "Founding Engineer" and "First Engineer" get searched far less than "Software Engineer".
 Apply the AUTH_SILENT penalty of -15 here.
 
-=== STEP 7 — TAILOR A ONE-PAGE CV PER JOB ===
-NOW read cv/cv-master.tex and cv/resume.cls (deferred per rule B).
+=== STEP 7 — GET A CV FOR EACH JOB. CHECK THE LIBRARY BEFORE TAILORING. ===
+NOW read cv/cv-master.tex, cv/resume.cls and resumes/index.md (deferred per rule B).
+
+*** DO NOT TAILOR FROM THE MASTER UNTIL YOU HAVE CHECKED THE LIBRARY. ***
+resumes/ holds every CV this pipeline has ever produced, and resumes/index.md is its catalogue.
+Tailoring is the most expensive work in the run. Re-tailoring something already tailored is
+pure waste, and it is the reason this step exists.
+
+Work down these three rules in order and stop at the first that applies:
+
+  RULE 1 — EXACT JOB ALREADY HAS A CV. If resumes/index.md has a row whose job_url matches this
+  posting after the same normalisation you used in STEP 2, that CV was built for this exact
+  role. REUSE IT VERBATIM. Do not re-tailor and do not "improve" it. This happens when a job
+  was prepared but never submitted and is still live. Record reuse_of in the index row and log
+  it in your report as REUSED.
+
+  RULE 2 — A CLOSE ENOUGH VARIANT EXISTS. If a row shares this job's archetype AND at least
+  three of the named technologies in the job description, START FROM THAT FILE rather than the
+  master. Change only the SUMMARY block so it names this company and mirrors this description.
+  Leave experience, projects and skills as they are — they were already fitted to this
+  archetype. Record derived_from in the index row and log it as DERIVED.
+  Archetypes: frontend, backend, fullstack, mobile, ai-integration, cloud-infra, generalist.
+  Pick exactly one per job and write it in the index.
+
+  RULE 3 — NOTHING CLOSE. Tailor from cv/cv-master.tex as below. Log it as FRESH.
+
+*** REUSE NEVER MEANS SENDING A GENERIC CV. *** If a candidate CV names a different company in
+its summary, or leads on a stack this job does not ask for, it is NOT close enough — fall to
+the next rule. A recycled CV that reads as recycled is worse than no application. When in
+doubt, tailor fresh; the budget can afford it and the credibility cannot afford the alternative.
+
 Four sections carry a %% TAILORABLE marker: SUMMARY (mirror the job description), EXPERIENCE
 bullets (reorder and reword to match JD keywords), PROJECTS (keep the 3 or 4 most relevant),
 SKILLS (reorder so the JD's stack appears first).
@@ -277,7 +334,10 @@ For each job, in a scratch working directory:
      recompile. A compile error means FIX IT — never ship a broken CV.
      Note: the untailored master runs to 2 pages with all five projects. Dropping projects to
      reach one page is expected and is what the PROJECTS marker is for.
-  5. Record in the packet THAT IT COMPILED and the page count. Not the path.
+  5. SAVE THE TAILORED SOURCE INTO THE LIBRARY as
+     resumes/<company-slug>-<role-slug>.tex, so tomorrow's run can reuse it.
+  6. Record in the packet THAT IT COMPILED, the page count, the library filename, and whether
+     the CV was REUSED, DERIVED or FRESH. Not the path to the PDF.
 THE PDF DOES NOT SURVIVE TO STAGE 2 — different session, different container. Compiling here is
 a VALIDATION step proving the LaTeX is correct and fits one page while there is still time to
 fix it. Stage 2 recompiles from the LaTeX carried in the packet. THAT IS WHY THE PACKET MUST
@@ -323,9 +383,23 @@ Row format, nine columns in this exact order:
     | company_domain | company | role_title | job_url | posted | fit | low_comp | date | status |
 Example:
     | cogram.com | Cogram | Product Engineer | https://www.ycombinator.com/companies/cogram/jobs/LDTrViN | undated | 80 | 85 | 2026-08-09 | prepared |
-Status for a new row is always "prepared".
+Status for a new row is always "prepared". Stage 2 changes it to "submitted" later, and only
+after Faisal confirms he pressed the button himself.
 IF ZERO JOBS SURVIVED, DO NOT WRITE THIS FILE AT ALL.
 Also append any newly rejected companies to state/standing-rejected.md with a reason.
+
+=== STEP 11b — UPDATE THE RESUME LIBRARY INDEX ===
+Append one row to resumes/index.md for every CV you produced or reused today. This is what
+makes tomorrow cheaper, and a CV saved without an index row is invisible and will be rebuilt
+from scratch. Columns, in this exact order:
+
+    | company_domain | company | role_title | archetype | resume_file | job_url | origin | derived_from | date |
+
+origin is exactly one of REUSED, DERIVED or FRESH. derived_from is the resume_file it started
+from, or "-" when origin is FRESH. archetype is one of frontend, backend, fullstack, mobile,
+ai-integration, cloud-infra, generalist.
+For a REUSED CV, do not add a second copy of the file — add the index row pointing at the
+existing file so the reuse is visible in the history.
 
 === STEP 12 — COMMIT ===
 Commit everything you changed with a message like
