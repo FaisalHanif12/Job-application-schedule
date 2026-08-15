@@ -35,6 +35,9 @@ second copy of it, so the reuse is visible in the history.
 
 | company_domain | company | role_title | archetype | resume_file | job_url | origin | derived_from | date |
 |---|---|---|---|---|---|---|---|---|
+| vanta.com | Vanta | Sr. Backend Software Engineer, Integrations Platform | backend | resumes/vanta-backend-integrations-platform-engineer.tex | https://jobs.ashbyhq.com/vanta/e76ea2d6-a514-458c-87fd-0792e50ae6bf | FRESH | - | 2026-08-15 |
+| vanta.com | Vanta | Sr. Fullstack Software Engineer, Integrations Platform | fullstack | resumes/vanta-fullstack-integrations-platform-engineer.tex | https://jobs.ashbyhq.com/vanta/539cb2a8-b704-4f39-af0d-2bee5b529d1d | DERIVED | resumes/vanta-backend-integrations-platform-engineer.tex | 2026-08-15 |
+| auditdata.com | Auditdata | Full-Stack Software Engineer (React Native/React/.Net) | mobile | resumes/auditdata-fullstack-react-native-engineer.tex | https://himalayas.app/companies/auditdata/jobs/full-stack-software-engineer-react-native-react-net | FRESH | - | 2026-08-15 |
 
 <!-- The library starts empty. The first run tailors everything FRESH and fills this in.
      From the second run onward, expect a growing share of DERIVED as archetypes accumulate.

@@ -19,7 +19,12 @@ Oneleet, Humaans, Cua, Safepay, Cozmo AI, Ziina, Jiga, Scispot, SoSafe, Welltech
 SimpleStudy, Reedsy, Brigit, Marqeta, Petal, MEDFAR, Nuitee, Lazer, Zencastr, Deepnote,
 Railway, Roo.vet, Distru, Titan, Clera, Noto, Neptune, Tether, Composio, TENEX.AI, HiPeople,
 Kestra, Polymath, DVT, saas.group, Reveleer, Xsolla, Eventogy, Facet, Bluepina, Bjak,
-Sertis, Kake, erad, Tailor.
+Sertis, Kake, erad, Tailor, Pragmatike (job-board-mill pattern, ~70 near-identical generic
+"Ex YC Founder"/ladder-title postings across unrelated specialties and countries, untrustworthy),
+Rhizome (rhizome.ai, region-gated to LatAm only, not on the HQ allow-list), Squad/Bowery
+(Argentina-only remote), 83 Sciences (US work authorization required), Ooak Data (US
+citizens/visa holders only, also contractor not FTE), MochaCare (onsite SF 6-7 days/week plus
+US citizen/visa only).
 
 ## Never apply to, permanently
 
