@@ -61,19 +61,40 @@ rewrite a whole state file to add rows — that is how rows get lost.
    address gains.
 
 === TARGET: 10 JOBS ===
-FRESHNESS: prefer posted within 24 hours. You may go past 24h when a full sweep has not
-produced 10, but *** 48 HOURS IS THE ABSOLUTE CEILING AND IS NEVER CROSSED. *** Nothing older
-than two days enters the packet, for any reason, however good the role looks. Applying within
-24 hours gets roughly a 14 percent response rate against 7 percent after a week, and remote
-software roles pull three to eight hundred applications inside the first day. A three-day-old
-posting has already been read by hundreds of people and is not worth his morning.
+*** FRESHNESS — THE CEILING DEPENDS ON WHERE YOU FOUND THE JOB. REVISED 15 AUGUST 2026. ***
+Always prefer the freshest posting available, and rank a newer role above an older one when
+scores tie. But the ceiling is no longer one number:
+
+  FOUND ON A COMPANY'S OWN ATS BOARD  -> 7 DAYS.
+  Greenhouse, Lever, Ashby, Workable, or the company's own careers page, and NOT cross-posted to
+  LinkedIn or Indeed as far as you can tell. These roles are not in a race. Nobody is refreshing
+  a company board hourly, and a five-day-old posting on an obscure board has had fewer eyes on it
+  than a twelve-hour-old posting on a job aggregator.
+
+  FOUND ON AN AGGREGATOR, OR CROSS-POSTED  -> 48 HOURS, ABSOLUTE, NEVER CROSSED.
+  Himalayas, Arbeitnow, WeWorkRemotely, RemoteOK, LinkedIn, Indeed, or anything you can see
+  syndicated to them. These ARE a race. Applying within 24 hours gets roughly a 14 percent
+  response rate against 7 percent after a week, and a syndicated remote role pulls three to eight
+  hundred applications inside the first day. Two days old on an aggregator is already too late.
+
+WHY THIS SPLIT EXISTS. The 15 August run screened 1701 in-field postings across 47 boards and
+delivered 3. The funnel was working; the ceiling was the constraint. A company ATS board lists
+EVERY open role regardless of age, so a 150-job board typically has two or three postings inside
+48 hours and the other 147 are invisible to a 48-hour rule no matter how well they fit. Freshness
+was only ever a PROXY FOR LOW COMPETITION, which is Faisal's actual priority. On a low-visibility
+company board that proxy is weak, and enforcing it there threw away the best-matched roles in the
+run for no gain.
+
+ANY ROLE OLDER THAN 48 HOURS MUST CARRY ITS AGE IN THE PACKET, in days, so he sees what he is
+applying to. Beyond 7 days, drop it regardless of source.
 *** TEN IS THE TARGET AND YOU DO NOT STOP AT THE FIRST EMPTY SWEEP. ***
 Two runs in a row delivered zero after screening 150+ postings each. Faisal is paying for those
 runs. A zero day that cost a full budget is the worst outcome this task can produce, so before
 you may report fewer than ten you MUST work down this ladder and report which rungs you used:
 
   RUNG 1  All six discovery lanes at 24h freshness.
-  RUNG 2  Still short — extend to 48h across every lane. 48h IS THE ABSOLUTE CEILING.
+  RUNG 2  Still short — extend to each lane's ceiling: 48h on aggregator-sourced roles, 7 days on
+          roles read from a company's own ATS board. Those two ceilings are absolute.
   RUNG 3  Still short — harvest 20+ NEW ATS slugs you have never queried, from WebSearch on
           site:job-boards.greenhouse.io, site:jobs.lever.co, site:jobs.ashbyhq.com,
           site:apply.workable.com plus your keywords, and run them.
