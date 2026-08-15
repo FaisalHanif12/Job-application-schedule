@@ -19,7 +19,49 @@ Oneleet, Humaans, Cua, Safepay, Cozmo AI, Ziina, Jiga, Scispot, SoSafe, Welltech
 SimpleStudy, Reedsy, Brigit, Marqeta, Petal, MEDFAR, Nuitee, Lazer, Zencastr, Deepnote,
 Railway, Roo.vet, Distru, Titan, Clera, Noto, Neptune, Tether, Composio, TENEX.AI, HiPeople,
 Kestra, Polymath, DVT, saas.group, Reveleer, Xsolla, Eventogy, Facet, Bluepina, Bjak,
-Sertis, Kake, erad, Tailor.
+Sertis, Kake, erad, Tailor, Customer.io, TrueLayer, Paddle, Deepgram, GoCardless, Wolt,
+Bitpanda, Chainguard, Sticker Mule, Grailed, Zen Educate, Jeeves, Washmen, Epoch AI,
+Lessonspace, Student.com, MLabs, Creatunity, Contentsquare, MoonPay, PolicyMe, Rhizome AI,
+Helios Intelligence, Agave, Asendia AI, BlueCargo, 83 Sciences, Ohm, Allus AI, Roame,
+Turing College, Simbie AI, Hera, Duckie, Instrumentl, Ashby (own job board, GB/EU-restricted
+roles), Voltic, Fieldguide, DAT, Choco, Prophet Town LLC, Orbit Technologies, Alaffia Health,
+Evaboot, Pathway, Yuno, Cytix, Delightree, June AI, Bidbus, Wellinks, Aqora Quantum, Clerk,
+Modal, Temporal, PlanetScale.
+
+## 15 August 2026 — reasons worth keeping
+
+Zero jobs survived this run across four discovery lanes (Greenhouse+Ashby, Lever+Workable+
+aggregators, YC/Work-at-a-Startup/Wellfound, Hacker News+funding-news) plus a direct
+spot-check of Clerk/Cal.com/Modal/Temporal/PlanetScale/Neon. Full detail is in
+`packets/job-packets-2026-08-15.md`. Grouped so a future run doesn't re-research from scratch:
+
+- AUTH_BLOCKED, explicit country list or "Remote (US)" excluding Pakistan: Creatunity
+  (Remote from Europe only), Contentsquare, MoonPay, Rhizome AI (LatAm only), Helios
+  Intelligence (NY/CA/SF only), Agave, Simbie AI, Duckie, 83 Sciences, Fieldguide (all
+  Remote US only), Allus AI (CA/GA US only), Tailor (US citizenship/visa required), Ashby's
+  own postings (GB/EU-resident only).
+- Wrong HQ: Scispot and PolicyMe (Canada), Delightree (Bengaluru, India).
+- Not actually remote (hybrid or office-based despite remote-sounding framing): TrueLayer
+  (Milan office), GoCardless, Wolt, Bitpanda, Choco (Berlin hybrid), DAT, Orbit Technologies,
+  Alaffia Health (US city offices), Hera (in-person Berlin required).
+- Core stack mismatch: Grailed (Ruby on Rails/Sorbet), Sticker Mule and Roame (Go), Asendia
+  AI and Evaboot (Python), Aqora Quantum (Rust), Yuno (Kotlin/Spring Boot/Go), Chainguard
+  (Go/Java/Kotlin/Rust core).
+- Out of field: Ohm (hardware/battery testing), Voltic (mechanical/hardware, part-time),
+  Pathway (frontier ML research lab), Turing College (part-time teaching/mentoring).
+- Stale or closed despite reading fresh in search results — always re-verify against the
+  live ATS board, never trust the snippet: Zen Educate, Jeeves, Washmen, Epoch AI,
+  Lessonspace, Student.com (all zero open roles on their live Lever/Workable board), MLabs
+  (published_on 2026-07-14), Customer.io (~5 days old), Paddle (~75h old), Deepgram
+  (~49h old, borderline), Sticker Mule (~3 days per WWR), Modal/Temporal/PlanetScale (every
+  role weeks to months old, none remote-tagged or all US-city-based).
+- Staffing/agency pattern: Prophet Town LLC ("on-demand teams for clients").
+- Could not locate a live, openable posting (must-open rule not satisfiable, so not
+  packeted even though the lead looked promising): Cytix (sales roles only, no engineering),
+  June AI (no discoverable careers page), Wellinks (no SWE posting found), AutoAce (YC F26,
+  freshest lead of the day, but the only known job URL 404'd and no working link could be
+  found), Clerk (Ashby board present but empty), Cal.com and Neon (Ashby/Greenhouse slug
+  guesses both 404'd — may use a different ATS or slug, worth a fresh slug guess next time).
 
 ## Never apply to, permanently
 
