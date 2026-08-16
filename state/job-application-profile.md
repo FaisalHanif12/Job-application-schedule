@@ -90,7 +90,18 @@ requires one, either skip the job or name the gap honestly in the cover letter.
 | Current employer | Techxelo |
 | Current title | Software Engineer |
 | Degree | BS Software Engineering, University of Management and Technology (UMT), 2020-2024 |
-| Race / gender / veteran / disability | Leave blank or "prefer not to say". Voluntary |
+| Pronouns | He/Him |
+| Gender | Male |
+| Race / ethnicity | Asian (Not Hispanic or Latino) |
+| Veteran status | I am not a protected veteran. He has never served in the US armed forces |
+| Disability status | "I do not wish to answer". Do not guess this one and do not infer it from anything |
+
+*** ANSWER EVERY FIELD ON THE FORM, INCLUDING THE VOLUNTARY ONES. *** Changed 15 August 2026 on
+Faisal's explicit instruction. The earlier rule left the demographic questions blank on the
+grounds that they were his to answer. He has now answered them, above, and wants them filled in.
+A half-finished form is the thing to avoid.
+Disability remains the one exception, because nothing in this profile establishes it and it is
+not a thing to assume. Use "I do not wish to answer" and say so in the report.
 
 ## Salary - approved by Faisal, use exactly
 
@@ -372,6 +383,11 @@ degree and university, notice period, availability, LinkedIn / GitHub / portfoli
 work-authorisation and sponsorship answers, salary EXPECTATION per the Salary section,
 the cover letter, and the CV upload.
 
+FILL THE VOLUNTARY DEMOGRAPHIC QUESTIONS TOO — gender, race/ethnicity, veteran status and
+pronouns, from the standing answers table. Faisal instructed this explicitly on 15 August: a
+form left half-finished is worse than one completed. Disability status is the single exception:
+answer "I do not wish to answer", because nothing establishes it and it must never be guessed.
+
 NEVER FILL THESE. Stop, leave the field empty, and hand it to Faisal:
   - Government ID of any kind: SSN, national insurance number, passport number, CNIC,
     tax ID, driver's licence
@@ -380,8 +396,6 @@ NEVER FILL THESE. Stop, leave the field empty, and hand it to Faisal:
   - Any password, or creating an account on a job board
   - Salary HISTORY, which is a different question from salary expectation and is
     unlawful to ask in several of the jurisdictions in scope
-  - Race, ethnicity, gender, veteran status, disability — the profile says leave blank or
-    "prefer not to say", and that stays HIS choice to make, not one to fill in for him
   - Any checkbox that is a legal attestation, certification or e-signature: "I certify
     the above is true", "I agree to the terms", a typed-name signature field. He signs
     his own declarations. Filling one on his behalf is not yours to do.

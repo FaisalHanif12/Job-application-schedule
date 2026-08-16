@@ -60,22 +60,24 @@ rewrite a whole state file to add rows — that is how rows get lost.
    depends on a forwarding service. A missed interview invitation costs more than a nicer
    address gains.
 
-=== TARGET: 10 JOBS ===
+=== TARGET: 20 JOBS, FLOOR OF 15 ===
 *** FRESHNESS — THE CEILING DEPENDS ON WHERE YOU FOUND THE JOB. REVISED 15 AUGUST 2026. ***
 Always prefer the freshest posting available, and rank a newer role above an older one when
 scores tie. But the ceiling is no longer one number:
 
-  FOUND ON A COMPANY'S OWN ATS BOARD  -> 7 DAYS.
+  FOUND ON A COMPANY'S OWN ATS BOARD  -> 14 DAYS.
   Greenhouse, Lever, Ashby, Workable, or the company's own careers page, and NOT cross-posted to
   LinkedIn or Indeed as far as you can tell. These roles are not in a race. Nobody is refreshing
   a company board hourly, and a five-day-old posting on an obscure board has had fewer eyes on it
   than a twelve-hour-old posting on a job aggregator.
 
-  FOUND ON AN AGGREGATOR, OR CROSS-POSTED  -> 48 HOURS, ABSOLUTE, NEVER CROSSED.
+  FOUND ON AN AGGREGATOR, OR CROSS-POSTED  -> 4 DAYS, ABSOLUTE, NEVER CROSSED.
   Himalayas, Arbeitnow, WeWorkRemotely, RemoteOK, LinkedIn, Indeed, or anything you can see
   syndicated to them. These ARE a race. Applying within 24 hours gets roughly a 14 percent
   response rate against 7 percent after a week, and a syndicated remote role pulls three to eight
-  hundred applications inside the first day. Two days old on an aggregator is already too late.
+  hundred applications inside the first day. So keep these as fresh as you can and rank them by recency, but four days is the outer edge
+  rather than two: at the volume Faisal now needs, a three-day-old syndicated posting he applies
+  to beats a perfect one he never sees.
 
 WHY THIS SPLIT EXISTS. The 15 August run screened 1701 in-field postings across 47 boards and
 delivered 3. The funnel was working; the ceiling was the constraint. A company ATS board lists
@@ -86,11 +88,16 @@ company board that proxy is weak, and enforcing it there threw away the best-mat
 run for no gain.
 
 ANY ROLE OLDER THAN 48 HOURS MUST CARRY ITS AGE IN THE PACKET, in days, so he sees what he is
-applying to. Beyond 7 days, drop it regardless of source.
-*** TEN IS THE TARGET AND YOU DO NOT STOP AT THE FIRST EMPTY SWEEP. ***
+applying to. Beyond 14 days, drop it regardless of source.
+
+*** CEILINGS RAISED AGAIN ON 15 AUGUST, DELIBERATELY, TO BUY VOLUME. *** They were 7 days and
+48 hours; that run delivered 3. Faisal's judgement is that a bulk of applications is what
+produces interviews, and that a slightly older posting he actually applies to is worth more than
+a fresher one that never enters the packet. Rank by freshness, but do not discard on it early.
+*** TWENTY IS THE TARGET, FIFTEEN IS THE FLOOR, AND YOU DO NOT STOP AT THE FIRST EMPTY SWEEP. ***
 Two runs in a row delivered zero after screening 150+ postings each. Faisal is paying for those
 runs. A zero day that cost a full budget is the worst outcome this task can produce, so before
-you may report fewer than ten you MUST work down this ladder and report which rungs you used:
+you may report fewer than fifteen you MUST work down this ladder and report which rungs you used:
 
   RUNG 1  All six discovery lanes at 24h freshness.
   RUNG 2  Still short — extend to each lane's ceiling: 48h on aggregator-sourced roles, 7 days on
@@ -102,10 +109,10 @@ you may report fewer than ten you MUST work down this ladder and report which ru
           than the first page. These carry hundreds of roles per call.
   RUNG 5  Still short — widen titles: include "Software Engineer II", "Senior Software
           Engineer", "Web Developer", "Application Developer", "Platform Engineer".
-  RUNG 6  Still short — spend the overrun budget up to 320 calls on more slugs and deeper paging.
+  RUNG 6  Still short — spend the overrun budget up to 500 calls on more slugs and deeper paging.
 
 *** THE LADDER TERMINATES ON AN IN-FIELD SCREENED COUNT, NOT ON RUNG COMPLETION. ***
-YOU MAY NOT REPORT FEWER THAN TEN UNTIL YOU HAVE SCREENED AT LEAST 300 IN-FIELD POSTINGS.
+YOU MAY NOT REPORT FEWER THAN FIFTEEN UNTIL YOU HAVE SCREENED AT LEAST 600 IN-FIELD POSTINGS.
 
 IN-FIELD means a software engineering role — developer, engineer, SRE, DevOps, data, ML, mobile,
 platform, architect. *** A GENERAL POSTING YOU SKIPPED BY ITS TITLE DOES NOT COUNT. *** If a feed
@@ -140,9 +147,9 @@ twenty calls.
 
 Count every IN-FIELD posting you actually evaluate against a filter and REPORT THE NUMBER. If you
 have run every rung and are still below 300 in-field, keep opening boards from sources/ats-boards.md
-until you reach 300 or hit the 320-call ceiling, whichever comes first.
+until you reach 600 in-field or hit the 500-call ceiling, whichever comes first.
 
-ONLY after all six rungs AND 300 screened may you report fewer than ten. The report must name
+ONLY after all six rungs AND 600 in-field screened may you report fewer than fifteen. The report must name
 every rung, its yield, and the total screened. "The market was empty" is only credible with
 that evidence attached.
 
@@ -151,20 +158,20 @@ applicant count. It does not permit packeting a posting you could not open. It d
 an AUTH_BLOCKED role. Working harder is the only lever — never a lower evidence bar. If ten
 honest jobs do not exist after six rungs, deliver what you have and show your work.
 
-=== BUDGET: PLANNED 250 TOOL CALLS, ABSOLUTE CEILING 320 ===
+=== BUDGET: PLANNED 400 TOOL CALLS, ABSOLUTE CEILING 500 ===
 This routine is the ONLY scheduled task on its account. It does not share a usage budget with
 the two email tasks, which run elsewhere. That is why the ceiling is generous compared to
 earlier versions: the constraint that forced 120 no longer applies, and an under-resourced run
 that reports "BUDGET REACHED" every morning is a worse failure than a slightly expensive one.
 
-Work to 250. Spend it in this order: about fifteen for the preflight, the reads and the
+Work to 400. Spend it in this order: about fifteen for the preflight, the reads and the
 exclusion set, the bulk on discovery and verifying postings, and THIRTY HELD BACK, ALWAYS, for
 the CV work and the writes. Research with no packet is a wasted run; a short packet is a real one.
 
-If you reach 250 and are STILL SHORT OF TEN JOBS, you may continue to 320 — but only on calls
+If you reach 400 and are STILL SHORT OF FIFTEEN JOBS, you may continue to 500 — but only on calls
 that will plausibly close the gap: opening a posting, checking an ATS feed, tailoring or
 compiling a CV. Not on retrying something that already failed. Not on a lane that has produced
-nothing. 320 IS ABSOLUTE AND IS NEVER CROSSED. Keep the thirty-call reserve either way.
+nothing. 500 IS ABSOLUTE AND IS NEVER CROSSED. Keep the thirty-call reserve either way.
 
 Leave headroom on the account. Stage 2 runs on it too, browser automation is expensive, and
 Faisal uses the account himself.
@@ -281,7 +288,7 @@ A row in "## The list" is NOT a company block. It blocks its own job_url and not
 ONE LIMIT REMAINS, and it is about the shape of a day's packet rather than about exclusion: AT
 MOST THREE ROLES FROM ANY ONE COMPANY IN A SINGLE RUN. Ten roles at one employer is not a day's
 work, it reads as spray-and-pray to whoever opens the applications, and it stakes the whole
-morning on one hiring team. Beyond three, take the highest-scoring three and leave the rest for
+morning on one hiring team. Beyond five, take the highest-scoring five and leave the rest for
 another day. They are not excluded and they remain available tomorrow.
 
 Normalise URLs before comparing: strip the scheme, strip "www.", strip TRACKING parameters
@@ -408,6 +415,17 @@ feed, which means the role actually closed.
                    timezone band requiring more than 4 hours of US overlap from UTC+5.
                    Drop entirely. Never packet.
 
+   *** CLASSIFY AUTH FROM THE EMPLOYER'S OWN POSTING OR APPLICATION FORM. AN AGGREGATOR'S
+   LOCATION FIELD IS NOT EVIDENCE. *** Learned in Stage 2 on 15 August, the hard way. Himalayas
+   reported an Auditdata role as open to candidates from all countries, so it was packeted
+   AUTH_OPEN and a CV was tailored for it. The employer's own Recruitee form then turned out to
+   have a REQUIRED "preferred work location" field offering only Bulgaria, Croatia, EU remote,
+   Ukraine, Romania and six Poland options, with the EU entry reading verbatim "Candidate should
+   be based in EU". No worldwide option, nothing Faisal could truthfully tick. AUTH_BLOCKED, and
+   the whole packet slot was wasted. Where an aggregator surfaced the job, OPEN THE EMPLOYER'S
+   POSTING and classify from that. Aggregator metadata may point you at a job; it may never
+   decide its authorisation.
+
    The test between REGIONAL and BLOCKED is simple: does the posting merely say WHERE the role is
    remote, or does it state a REQUIREMENT ABOUT THE PERSON? Where alone is REGIONAL. A
    requirement about the person is BLOCKED. When genuinely ambiguous, treat it as REGIONAL and
@@ -424,11 +442,29 @@ feed, which means the role actually closed.
      - mobile, React Native, Expo
      - titles that mean "generalist engineer at a small company": product engineer,
        founding engineer, first engineer, software engineer
-   OUT OF FIELD, reject without spending audit calls: data science and ML research,
-   pure hardware or embedded, QA-only and test-automation-only roles, security research,
-   SRE-only on-call operations, blockchain and smart contracts, game development,
-   engineering management with no hands-on component, and anything requiring a language
-   or framework he does not have where it is the core of the job rather than a nice-to-have.
+     - test and QA automation WHERE THE HARNESS IS JAVASCRIPT OR TYPESCRIPT: Playwright,
+       Cypress, Jest, Detox. Widened 15 August; these are ordinary JS engineering work.
+     - data engineering and backend data plumbing in Node, TypeScript or Python
+     - SRE and platform roles WITH A BUILD COMPONENT, not pure on-call rotation
+     - integration, solutions and forward-deployed engineering on a JS/TS stack
+
+   *** THE STACK RULE, WIDENED 15 AUGUST 2026 TO BUY VOLUME. ***
+   The old rule rejected any role whose CORE language he does not have. That was too tight at the
+   volume now required. The new rule: A ROLE IS IN FIELD IF HE HAS AT LEAST HALF ITS NAMED CORE
+   STACK, and JavaScript or TypeScript is somewhere in that half. A second language he lacks —
+   Python, Go, Java, Ruby, C# — is a GAP TO BE NAMED IN THE COVER LETTER, not a rejection.
+   Score it down on fit; do not drop it.
+
+   THE ONE PLACE THIS DOES NOT BEND: if he has LESS than half the named stack, it is still out.
+   The Auditdata role on 15 August wanted React, TypeScript, Vite, React Native and Expo AND
+   C#, .NET 8-10, .NET Framework, ASP.NET Core, Entity Framework, WPF/XAML and Azure SQL. That is
+   well under half, and a CV was tailored for it anyway. Half is the line, and it is measured
+   against what the posting NAMES AS REQUIRED, not against the nice-to-haves.
+
+   OUT OF FIELD, reject without spending audit calls: data science and ML research (building
+   models, not building on them), pure hardware or embedded, security research, blockchain and
+   smart contracts, game development, engineering management with no hands-on component, and any
+   role where he has under half the named core stack.
 6. Full-time, part-time or contract all acceptable.
 7. Not in state/standing-rejected.md and not in the exclusion set.
 
@@ -509,6 +545,14 @@ For each job, in a scratch working directory:
      reach one page is expected and is exactly what the PROJECTS marker is for.
      If a job survives every filter but its CV cannot be made to compile to one page, REPORT
      THAT JOB AS BLOCKED rather than shipping a CV in the wrong shape.
+  4b. *** THE FILE THE EMPLOYER RECEIVES IS ALWAYS NAMED M_Faisal_Hanif_CV.pdf. NEVER ANYTHING
+     ELSE. *** No company name, no role name, no date, no version number in the filename a
+     recruiter sees. A CV arriving as "M_Faisal_Hanif_CV_Vanta_Backend.pdf" tells the person
+     opening it that it was generated per-application, which reads as automated and gets the
+     application discarded. The tailoring belongs INSIDE the document, never in its name.
+     Internal working names in the repo are a separate thing and stay descriptive, per step 5.
+     Write the packet with the delivered filename stated explicitly so Stage 2 cannot get this
+     wrong either.
   5. SAVE THE TAILORED SOURCE INTO THE LIBRARY as
      resumes/<company-slug>-<role-slug>.tex, so tomorrow's run can reuse it.
   6. Record in the packet THAT IT COMPILED, the page count, the library filename, and whether
@@ -529,6 +573,12 @@ product. Never a stock paragraph. If a company is too opaque to say anything spe
 THE PACKET rather than inventing enthusiasm.
 
 === STEP 9 — SCREENING ANSWERS ===
+*** ANSWER EVERY FIELD THE FORM WILL ASK, INCLUDING THE VOLUNTARY DEMOGRAPHIC ONES. ***
+Faisal instructed this explicitly on 15 August after watching a Stage 2 run leave them blank.
+Carry into the packet, from the standing answers table: pronouns He/Him, gender Male, race Asian
+(Not Hispanic or Latino), veteran status "I am not a protected veteran". Disability status is the
+ONE exception — carry "I do not wish to answer", because nothing establishes it and it must never
+be guessed or inferred. Stage 2 reads only the packet and cannot look any of this up.
 From the standing answers table in state/job-application-profile.md, AND the SALARY policy from
 its separate "## Salary" section — that is NOT in the standing answers table and is easy to miss
 entirely. Carry into every packet: LinkedIn, GitHub and portfolio URLs, and the guidance to leave
@@ -605,7 +655,7 @@ applied-jobs row becomes a duplicate application tomorrow.
 === STEP 13 — REPORT. Short, plain English, no em dashes. ===
   a) Preflight block: which tools ALIVE, which DEAD with the exact error
   a2) TOTAL IN-FIELD POSTINGS SCREENED, and separately the raw postings seen. IN-FIELD IS THE
-     HEADLINE NUMBER. Below 300 in-field with fewer than ten jobs delivered means the run was
+     HEADLINE NUMBER. Below 600 in-field with fewer than fifteen jobs delivered means the run was
      unfinished, not that the market was empty. Say so plainly, in those words.
   a3) HOW MANY ATS BOARDS FROM sources/ats-boards.md YOU OPENED, out of how many are in the file.
      A run that opened fewer than twenty boards and reported a zero did not do the work.
@@ -615,14 +665,14 @@ applied-jobs row becomes a duplicate application tomorrow.
      with UNREADABLE counted separately, never folded into a reject bucket
   d) The three AUTH counts — OPEN, REGIONAL, BLOCKED — and how many AUTH_REGIONAL entered the
      packet, each with its restriction quoted verbatim
-  d2) WHICH ESCALATION RUNGS YOU RAN and what each yielded. Mandatory whenever fewer than ten
+  d2) WHICH ESCALATION RUNGS YOU RAN and what each yielded. Mandatory whenever fewer than fifteen
      jobs are delivered. A short day without this section is an incomplete report.
   d3) How many postings were dropped for stating pay in a currency other than USD, EUR or GBP
   e) Jobs delivered with both scores
   f) CVs compiled successfully, and any that failed
   g) Any judgement call and what you assumed
   h) Which writes landed, which were deliberately skipped, and whether the commit succeeded
-  i) Tool health, and TOTAL TOOL CALL COUNT against the planned 250 and the absolute 320, with
+  i) Tool health, and TOTAL TOOL CALL COUNT against the planned 400 and the absolute 500, with
      the size of any overrun and a one-line reason for it
   j) Approximate subagent tokens used, so cost stays visible
 

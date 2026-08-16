@@ -68,8 +68,15 @@ The morning's PDFs do not exist here — different session, different container.
 (or take it straight from `resumes/<file>.tex`), run `pdflatex -interaction=nonstopmode` twice,
 assert one page.
 
-Name the output something a recruiter will understand — `M_Faisal_Hanif_CV.pdf`, not
-`01_powerprozesse.tex`.
+**The uploaded file is always named `M_Faisal_Hanif_CV.pdf`. Never anything else.** Not
+`01_powerprozesse.tex`, and — just as important — not `M_Faisal_Hanif_CV_Vanta_Backend.pdf`. A
+filename carrying the company or role tells the recruiter opening it that the CV was generated
+for that one application, which reads as automated and gets it binned. The tailoring lives inside
+the document.
+
+When applying to several jobs in one sitting, give each its own directory and use the same
+filename in each — `cv1/M_Faisal_Hanif_CV.pdf`, `cv2/M_Faisal_Hanif_CV.pdf` — rather than
+disambiguating in the name itself.
 
 ## Per job
 
@@ -93,6 +100,11 @@ university, notice period, availability, LinkedIn / GitHub / portfolio URLs, wor
 and sponsorship answers, salary **expectation** per the profile's Salary section, the cover
 letter, the CV upload.
 
+FILL THE VOLUNTARY DEMOGRAPHIC QUESTIONS TOO — gender, race/ethnicity, veteran status and
+pronouns, from the standing answers table. Faisal instructed this explicitly on 15 August: a
+form left half-finished is worse than one completed. Disability status is the single exception:
+answer "I do not wish to answer", because nothing establishes it and it must never be guessed.
+
 **Never fill.** Leave the field, complete everything else, hand it to him at the end:
 
 - Government ID of any kind — SSN, national insurance number, passport number, CNIC, tax ID,
@@ -102,7 +114,6 @@ letter, the CV upload.
 - Any password, or creating an account on a job board
 - **Salary history** — a different question from salary expectation, and unlawful to ask in
   several of the jurisdictions in scope
-- Race, ethnicity, gender, veteran status, disability — his choice to make, not one to make for him
 - Any checkbox that is a legal attestation, certification or e-signature: *"I certify the above
   is true"*, *"I agree to the terms"*, a typed-name signature field. He signs his own declarations.
 - A reference's personal contact details without their consent

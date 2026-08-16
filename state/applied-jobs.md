@@ -78,7 +78,7 @@ the top of the report.
 | remote.com | Remote.com | Senior DevOps Consultant (Remote Build) | https://remote.com/openings/7763713003 | Posted 2 days ago per Remote.com's own careers page | 45 | 25 | 2026-08-07 | prepared |
 | vanta.com | Vanta | Sr. Backend Software Engineer, Integrations Platform | https://jobs.ashbyhq.com/vanta/e76ea2d6-a514-458c-87fd-0792e50ae6bf | 2026-08-14T22:41:07Z per Ashby publishedAt | 66 | 40 | 2026-08-15 | prepared |
 | vanta.com | Vanta | Sr. Fullstack Software Engineer, Integrations Platform | https://jobs.ashbyhq.com/vanta/539cb2a8-b704-4f39-af0d-2bee5b529d1d | 2026-08-14T22:41:27Z per Ashby publishedAt | 68 | 40 | 2026-08-15 | prepared |
-| auditdata.com | Auditdata | Full-Stack Software Engineer (React Native/React/.Net) | https://himalayas.app/companies/auditdata/jobs/full-stack-software-engineer-react-native-react-net | 2026-08-15, same day | 52 | 65 | 2026-08-15 | prepared |
+| auditdata.com | Auditdata | Full-Stack Software Engineer (React Native/React/.Net) | https://himalayas.app/companies/auditdata/jobs/full-stack-software-engineer-react-native-react-net | 2026-08-15, same day | 52 | 65 | 2026-08-15 | rejected |
 
 ## Rejected on 6 August with a reason worth keeping
 
@@ -263,3 +263,28 @@ but 0 postings that day). Appended to sources/ats-boards.md. Dead slugs tried an
 sst, convex, planetscale, prisma, fly, webflow, framer, replicate, together-ai, fireworks-ai,
 appwrite, strapi, hasura, dagster, scale, wandb, huggingface, digitalocean, groq,
 perplexity-ai, windsurf, julius-ai.
+
+## Stage 2, 15 August 2026 - Auditdata stopped at the form, AUTH_OPEN was wrong
+
+Stage 2 opened all three packeted jobs. Both Vanta roles filled cleanly and are waiting at
+submit. Auditdata was STOPPED and the row set to rejected.
+
+Reason: the packet classified it AUTH_OPEN on the strength of Himalayas metadata reading
+"Open to candidates from all countries". THE EMPLOYER'S OWN FORM SAYS OTHERWISE. Auditdata
+hires on Recruitee at auditdata.recruitee.com, and its required "What is your preferred work
+location?" field offers only these options:
+
+  Bulgaria remote / Croatia remote / EU remote / Kyiv UA hybrid / Poland (x6) /
+  Romania remote / Ukraine (x2)
+
+with the EU entry annotated verbatim "This is remote position. Candidate should be based in EU."
+There is no worldwide option and no option Faisal could truthfully tick. That is a requirement
+about the PERSON, not a statement about where the role is remote, so it is AUTH_BLOCKED.
+
+The employer's posting also asks for 5+ years where Faisal has 3+, and requires strong
+professional experience in C# / .NET alongside React and React Native.
+
+LESSON FOR STAGE 1: an aggregator's location or authorisation metadata is NOT evidence.
+Himalayas' locationRestrictions field said worldwide and the employer's own ATS said EU-only.
+Classify AUTH from the employer's own posting or application form, never from the aggregator
+record that surfaced it.
