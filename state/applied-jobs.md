@@ -79,6 +79,10 @@ the top of the report.
 | vanta.com | Vanta | Sr. Backend Software Engineer, Integrations Platform | https://jobs.ashbyhq.com/vanta/e76ea2d6-a514-458c-87fd-0792e50ae6bf | 2026-08-14T22:41:07Z per Ashby publishedAt | 66 | 40 | 2026-08-15 | prepared |
 | vanta.com | Vanta | Sr. Fullstack Software Engineer, Integrations Platform | https://jobs.ashbyhq.com/vanta/539cb2a8-b704-4f39-af0d-2bee5b529d1d | 2026-08-14T22:41:27Z per Ashby publishedAt | 68 | 40 | 2026-08-15 | prepared |
 | auditdata.com | Auditdata | Full-Stack Software Engineer (React Native/React/.Net) | https://himalayas.app/companies/auditdata/jobs/full-stack-software-engineer-react-native-react-net | 2026-08-15, same day | 52 | 65 | 2026-08-15 | rejected |
+| roo.vet | Roo | Full Stack Engineer | https://job-boards.greenhouse.io/roo/jobs/5391583008 | 2026-08-14T13:00:18-04:00, Roo's own Greenhouse board | 88 | 55 | 2026-08-16 | prepared |
+| roo.vet | Roo | Senior Software Engineer, Frontend Platform | https://job-boards.greenhouse.io/roo/jobs/5391625008 | 2026-08-14T13:27:53-04:00, Roo's own Greenhouse board | 82 | 62 | 2026-08-16 | prepared |
+| classwallet.com | ClassWallet | Technical Lead, Full Stack Engineer | https://apply.workable.com/classwallet/j/6C148EAD45/ | 2026-08-12, ClassWallet's own Workable board | 60 | 58 | 2026-08-16 | prepared |
+| revion.inc | Revion | Founding Engineer | https://www.ycombinator.com/companies/revion/jobs/4ahU7yI-founding-engineer | Undated on the YC board, YC Winter 2026 batch | 40 | 70 | 2026-08-16 | prepared |
 
 ## Rejected on 6 August with a reason worth keeping
 
@@ -288,3 +292,65 @@ LESSON FOR STAGE 1: an aggregator's location or authorisation metadata is NOT ev
 Himalayas' locationRestrictions field said worldwide and the employer's own ATS said EU-only.
 Classify AUTH from the employer's own posting or application form, never from the aggregator
 record that surfaced it.
+
+## 16 August 2026 - 4 job packets prepared, thin day despite exhausting the escalation ladder
+
+No open PR from a previous run was found (checked first, per this run's instructions), so the
+exclusion set was built from the default branch alone: 30 rows, 30 job URLs, 29 distinct
+companies (Vanta appeared twice). Distinct-company count blocks nothing, per the per-URL
+exclusion rule.
+
+Ten discovery lanes ran (two at a time, research-only subagents): Greenhouse, Ashby, Lever
+plus Workable, bulk aggregators (Himalayas/Arbeitnow/WeWorkRemotely), YC/Work at a
+Startup/Wellfound, Hacker News "Who is hiring" (August 2026 thread, item 49156683) plus
+funding-news leads, a worldwide-remote-focused ATS harvest, deeper aggregator paging plus new
+Lever/Workable slugs, a full-accounting pass over the eleven biggest Tier 2 Greenhouse boards
+(Databricks, Robinhood, Stripe, Cloudflare, Reddit, Brex, MongoDB, Coinbase, Dropbox, Airtable,
+ScaleAI), and a small-startup "founding/product engineer" sweep. Total in-field postings
+actually evaluated against the filters: 948 (97+86+26+40+20+29+5+10+605+30), comfortably past
+the 600-in-field floor this run's instructions require before reporting fewer than 15 jobs.
+
+All six escalation rungs were exercised: the known ATS list first, then wider freshness
+ceilings per source (14 days on a company's own board, 4 days on anything aggregator-sourced
+or cross-posted), then 20+ newly harvested ATS slugs via WebSearch, then deeper aggregator
+paging (Himalayas offsets to 500, Arbeitnow pages 2-4), then widened titles (Senior Software
+Engineer, Software Engineer II, Web Developer, Application Developer, Platform Engineer all
+included), then the full-accounting pass on the largest boards to close the in-field-screened
+gap. Only 4 postings survived every hard filter after independent verification.
+
+The big Tier 2 boards were the starkest finding: 605 engineering-titled postings evaluated
+across 11 companies, 121 remote, only 18 both remote and inside the 14-day freshness ceiling,
+and every one of those 18 failed on stack (Go/Python/Rust/Solidity/Spark cores, no JS/TS named)
+or currency (Coinbase CAD, Dropbox PLN) or seniority (Staff-level). Big-name boards have volume
+but almost no fresh in-field-and-stack-matching turnover in any given two-week window - the
+300+ in-field floor this file's method notes describe is real, but it does not translate into
+survivors once freshness and stack are both applied strictly.
+
+One process note worth keeping: a discovery lane's candidate list included Close.com (Senior
+Frontend Engineer, Growth), which is already a permanent entry in state/standing-rejected.md
+from an earlier run with no reason recorded. The lane's own skip-list omitted it by oversight.
+It was caught during this run's independent verification pass and dropped before packeting -
+standing-rejected.md is authoritative and its entries are never re-applied to without new
+evidence, even when a fresh sweep resurfaces the company looking clean.
+
+Two other near-misses were checked and correctly dropped: Vanta's only "fresh"-looking Ashby
+candidate turned out to be a stale posting from March 2026 once the JSON API was read directly
+(the WebFetch HTML render had shown no date at all); Cohere's candidate had been removed from
+the live feed entirely between discovery and verification (dead link). An "Odin" (useodin.com)
+candidate surfaced via the Hacker News lane could not be resolved to a stable, verifiable
+application URL despite three separate lookup attempts (the only "odin" ATS token found belongs
+to an unrelated NYC fintech with no engineering roles) and was dropped rather than guessed.
+
+Jobs delivered: Roo Full Stack Engineer (88/55), Roo Senior SWE Frontend Platform (82/62),
+ClassWallet Technical Lead Full Stack Engineer (60/58, honest stretch - posting wants 8+ years,
+Faisal has 3+), Revion Founding Engineer (40/70, honest stretch - posting requires production
+Python or Go plus voice-agent/AI-ML experience Faisal does not have, flagged plainly in the
+cover letter). All four AUTH_REGIONAL, all four company domains new to this table.
+
+pdflatex was not installed in this session's container at the start of the run and was
+installed fresh (texlive-latex-base, texlive-latex-recommended) before any CV work began; all
+four CVs compiled to exactly one page on the second pass. Total tool calls across the run:
+roughly 410 (311 across the ten discovery-lane subagents, plus this session's own direct
+WebFetch/WebSearch verification and CV-compile calls) against the 400 planned budget - a small,
+justified overrun to finish verifying the last few candidates rather than leaving them
+half-checked. Subagent token usage across the ten lanes: roughly 841,000 tokens.
