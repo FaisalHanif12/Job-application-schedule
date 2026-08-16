@@ -125,6 +125,39 @@ API identifier was wrong: **Deel** (`jobs.ashbyhq.com/deel` is live in a browser
 posting-api slug `deel` returns an empty array) and **Hotjar** (`job-boards.greenhouse.io/hotjar`
 exists, `boards-api` 404s on three tries).
 
+## Added 16 August 2026 — newly verified, confirmed by matching platform URL
+
+| company | endpoint | total | eng | location wording, verbatim |
+|---|---|---|---|---|
+| Roo | `boards-api.greenhouse.io/v1/boards/roo/jobs` | ~10 | ~2-4 | `Remote` (generic, no country stated; salary shown in US metro cost-of-living tiers) |
+| ClassWallet | `apply.workable.com/api/v1/widget/accounts/classwallet` | ~5 | 2-3 | `United States (remote)` |
+| Xealth | `boards-api.greenhouse.io/v1/boards/xealth/jobs` | small | 4 | not fully characterized this run |
+| Figma | `boards-api.greenhouse.io/v1/boards/figma/jobs` | 162 | mostly non-eng in the sample checked | not fully characterized this run |
+| Webflow | `boards-api.greenhouse.io/v1/boards/webflow/jobs` | 28 | not characterized | note: Webflow's Ashby token is dead (see dead list) but its Greenhouse token is live |
+| Mattermost | `boards-api.greenhouse.io/v1/boards/mattermost/jobs` | 14 | some | AUTH_BLOCKED seen on US/Canada roles ("EAR/ITAR export control", "must be legally authorized to work in Canada without sponsorship") |
+| Vercel | `boards-api.greenhouse.io/v1/boards/vercel/jobs` | 83 | mostly non-eng (sales/GTM heavy) | note: Vercel's Ashby board (already in Tier 2) was empty that day; its Greenhouse board is the live one with volume |
+
+Verified live but low/no engineering yield, not worth repeat visits without new evidence:
+Netlify (Greenhouse, 3 total), PlanetScale (Greenhouse, 10 total), Knock (Greenhouse, 2),
+Appfire (Greenhouse, 29, roles onsite-Bulgaria/Poland-restricted), WizardCommerce (Greenhouse, 7),
+PalomaHealthUK (Greenhouse, 18, stack dominated by C#/Rust/Python/Java), TechHolding (Greenhouse,
+21, "must be authorized to work for ANY employer in the U.S., unable to sponsor"), Vynyl
+(Greenhouse, 5), LumiMeds (Greenhouse, 46, LATAM-only location field), Watershed (Ashby, 2),
+Elevenlabs (Ashby, 16, mostly stack-mismatched), Column (Ashby, 1), n8n (Ashby, 3, AUTH_BLOCKED:
+"we can sponsor visas to Germany; for any other country you need existing right to work"), Zip
+(Ashby, 3), GiveDirectly (Greenhouse, 1, AUTH_BLOCKED "unable to sponsor visas in the U.S. or
+U.K."), UseNourish (Greenhouse, 1), AssetWatch (Greenhouse, 1), NimbleGravity (Greenhouse, 1,
+"language-agnostic" backend, no confirmed JS/TS core).
+
+**Dead, added 16 August (Greenhouse token tried, 404 or 0 eng postings):** clerk, deno, temporal,
+linear, retool, raycast, notion, airbyte, posthog, sentry, neon, supabase, render, transifex,
+10up, processstreet (0 eng).
+**Dead, added 16 August (Ashby token tried, 404):** moralis, prisma, strapi, novu, cal.com,
+rippling, scale, statsig, assembled, metronome, gem, sourcegraph, brex, ashbyhq, increase, moov,
+truework, pilot, rows, merge, persona, middesk, runway, orb, moderntreasury, ghost, commonroom.
+**Dead, added 16 August (Lever token tried, 404 or 0 jobs):** sprucesystems, anovium, leadtech.
+**Unreadable via WebFetch (client-rendered, no JSON found at guessed API path):** lokalise, weglot.
+
 ## A note on Lever
 
 Every Lever slug in this file is **unverified**. Lever was not reachable from the session that

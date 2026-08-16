@@ -24,7 +24,13 @@ Sertis, Kake, erad, Tailor, Pragmatike (job-board-mill pattern, ~70 near-identic
 Rhizome (rhizome.ai, region-gated to LatAm only, not on the HQ allow-list), Squad/Bowery
 (Argentina-only remote), 83 Sciences (US work authorization required), Ooak Data (US
 citizens/visa holders only, also contractor not FTE), MochaCare (onsite SF 6-7 days/week plus
-US citizen/visa only).
+US citizen/visa only), Mattermost (US roles cite EAR/ITAR export-control eligibility, Canada
+roles require authorization without sponsorship), n8n (visa sponsorship only to Germany, all
+other countries need existing right to work), GiveDirectly (unable to sponsor visas in the US
+or UK), TechHolding ("must be authorized to work for ANY employer in the U.S., unable to
+sponsor"), DualEntry (EU/LATAM/Canada only), Hatchet (Go/Kubernetes core, no JS/TS), WorkOS
+(Design Engineer req recurs across runs - TypeScript/React listed only as "Bonus", role is
+primarily Figma/design-tool work), Bluepina (region/timezone restricted, recurs across runs).
 
 ## Never apply to, permanently
 
